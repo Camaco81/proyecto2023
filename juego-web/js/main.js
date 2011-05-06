@@ -93,7 +93,7 @@ function numEnt() {
 }
 
 function levelUp() {
-    if (score >= 20) {
+    if (score >= 50) {
        
         detener();
         modalShow("Felicidades", "Has completado este nivel");

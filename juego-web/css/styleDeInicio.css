@@ -3,23 +3,36 @@
     padding :0;
 }
 body{
-background-color: skyblue;
+    background-image: url(/juego-web/asess/img/fondo-verde-acuarela.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
 }
 
 .login{
    background-color: white;
-   color: skyblue;
+   color: rgb(0, 44, 10); ;
    text-align: center;
-   padding: 30px;
-   margin: 10%;
-   margin-right: 40%;
-   margin-left: 20%;
-   border: 4px solid #5624d0;
-   border-radius: 7px;
-   width: 550px;
+   padding: 20px;
+   justify-content: baseline;
+   font-size: 20px;
+   margin: 20px;
+   width: 520px;
+   height: 350px;
+   border: 4px solid #50ea19;
+   border-radius: 50%;
+   
 }
 .login a{
     text-decoration: none;
-    color: violet;
+    color: rgb(46, 140, 2);
     font-size: 20px ;
 }
+
+
