@@ -1,5 +1,18 @@
 header{
+    text-align: center;
     background-color: black;
     color:aliceblue;
     padding: 20px;
+}
+footer{
+    text-align: center;
+    
+    background-color: black;
+    color:aliceblue;
+    padding: 20px;
+
+}
+#primary{
+    height: 50vh;
+    text-align: center;
 }
