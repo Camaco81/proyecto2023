@@ -135,7 +135,7 @@ section{
     text-align: center;
 }
 
-#services{
+#course{
     background-color: white;
     padding: 10% 10% 0 10%;
     text-align: center;
@@ -172,13 +172,13 @@ section{
  margin: 5px;
 }
 
-#section7 article{
+#gallery article{
     padding: 10% 10% 0 10%;
 }
-#section7 div.black{
+#gallery div.black{
     padding: 10%;
 }
-#section7 div.black p{
+#gallery div.black p{
     color: white;
 }
 
