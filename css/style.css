@@ -7,16 +7,53 @@ body{
 ul{
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
+p{
+    
+    margin: 20px 0;
+}
+
+.grey{/*creo una clase con solo background para no aplicarlo a todos los card*/
+    
+    background-color: rgb(209, 209, 209);
+}
+.fucsia{/*Igual con esta*/
+    background-color: rgb(255, 0, 76);
+}
+
+.white{/*Igual con esta*/
+    background-color: white;
+}
+.black{/*Igual con esta*/
+    background-color: #222222;
+}
+
+.circle{ /*Igual con esta*/
+    border-radius: 50%;
+}
 
 
+body{
+   /*  es mejor este color un blanco no tan blanco
+   background-color: #eeebeb;    
+   pero para efecto de clonar la imagen usamos ese azul
+   */
+   background-color: rgb(160, 209, 255);
+}
 header{
     display: flex;
     background-color: white;
     color:black;
-    padding: 20px;
-
+    padding: 20px 5%;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 90%;
+    z-index: 99999;
 }
 header img {
     height: 50px;
@@ -27,13 +64,23 @@ header ul{
 
 nav a {
     font-size: 20px;
-    padding: 5px;
-    text-decoration: none;
+    padding: 10px;
+    color: black;
+    
 }
+
+nav a:hover { /*Efecto al pasar el mouse*/
+   
+    color: rgb(255, 0, 76);
+    text-decoration:solid;
+    
+    box-shadow: 0px 2px 0px 0px rgb(255, 0, 76, 0.8);
+}
+
 footer{
     text-align: center;
     
-    background-color: black;
+    background-color: #222222;
     color:aliceblue;
     padding: 20px;
 
@@ -42,8 +89,15 @@ footer{
  
 }
 
+section{
+    
+    margin: 2%;
+    text-align: center;
+}
+
 #primary{
     background-color: aliceblue;
+    margin-top: 120px;
 }
 #icon .in{
   align-items: center;
@@ -79,6 +133,57 @@ footer{
 #third{
     height: 50vh;
     text-align: center;
+}
+
+#services{
+    background-color: white;
+    padding: 10% 10% 0 10%;
+    text-align: center;
+}
+.container-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    max-width: 250px;
+}
+
+.card.grey a{
+    color: rgb(255, 0, 76);
+}
+
+.imagen-centered{
+    width: 100%;
+}
+#section6{
+    background-color: rgb(255, 0, 76);
+    color: white;
+    
+    padding: 5% 5% 5% 5%;
+}
+.buttons{
+ border: 1px white solid;
+ color: white;
+ padding: 5px 25px;
+ margin: 5px;
+}
+
+#section7 article{
+    padding: 10% 10% 0 10%;
+}
+#section7 div.black{
+    padding: 10%;
+}
+#section7 div.black p{
+    color: white;
+}
+
+.active{
+    color: rgb(255, 0, 76);
 }
 
 #third{
