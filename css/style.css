@@ -1,8 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: #fbfbfb;
+    
+}
 header{
-    text-align: center;
-    background-color: black;
-    color:aliceblue;
+    display: flex;
+    background-color: white;
+    color:black;
     padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    height: 50px;
+}
+header ul{
+    display: flex;
+}
+
+nav a {
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
 }
 footer{
     text-align: center;
