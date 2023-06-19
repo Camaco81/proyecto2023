@@ -10,6 +10,11 @@ ul{
 a{
     text-decoration: none;
 }
+#logo1{
+    width: 150px;
+    padding-right: 20px;
+    position: center;
+}
 p{
     
     margin: 20px 0;
@@ -84,8 +89,10 @@ footer{
     color:aliceblue;
     padding: 20px;
 
-}  #primary img{
+}  #first img{
     margin-right: 50rem;
+    height:200px;
+    width:300px;
  
 }
 
@@ -95,7 +102,7 @@ section{
     text-align: center;
 }
 
-#primary{
+#first{
     background-color: aliceblue;
     margin-top: 120px;
 }
@@ -123,12 +130,6 @@ section{
     padding: 2.5rem;
 }
 
-#containt{
- align-items:center;
- display: flex;
- margin-left: 8% ;
- margin-top: 30px;
-}
 
 #third{
     height: 50vh;
@@ -137,7 +138,7 @@ section{
 
 #course{
     background-color: white;
-    padding: 10% 10% 0 10%;
+    padding:  10% 0 10%;
     text-align: center;
 }
 .container-flex{
@@ -186,17 +187,15 @@ section{
     color: rgb(255, 0, 76);
 }
 
-#third{
-    background-color: aliceblue;
-}
+
   #third img{
-    margin-left: 40rem;
-    padding-left: 50px;
+    margin-left: 38rem;
     height: 100%;
 }
 
 #third{
     background-color: aliceblue;
+    padding: 2rem;
 }
 
 #modi3{
@@ -204,11 +203,12 @@ section{
    position: absolute;
    margin-right:10rem ;
    padding-left:20px;
+   padding-top: 10px;
 }
 .modi4{
    text-align: center;
    position: absolute;
-   margin-top: 68px;
+   margin-top: 58px;
    margin-right:20rem ; 
 }
 
