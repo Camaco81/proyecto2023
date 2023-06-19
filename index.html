@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto 2023</title>
     <link rel="stylesheet" href="css/style.css">
+    <!--aqui importamos la fuente de google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!--Aquí importamos fontawesome-->
+    <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <a>
             <img src="assets/img/logo.png"
                 alt="ogo" title="logo">
@@ -29,8 +35,7 @@
             </ul>
         </nav>
 
-    </header>
-    
+    </header>  
 
     <section id="primary">
         <h2 id="modi">Nuestros servicios</h2>
@@ -93,55 +98,60 @@
 <br>
 <section id="course" >
     <article>
-        <h4>¿Qué somos capaces de hacer?</h4>
-        <h2>Nuestros servicios</h2>
+        <h4>¿Conoces nuestros cursos?</h4>
+        <h2>Lista de cursos Ofertados</h2>
         <h6>Detalles</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur id maiores optio
-            magnam quidem eligendi nulla. Tenetur consequuntur laudantium iusto
-            veritatis ex nesciunt accusantium cupiditate, similique vitae quos molestiae. Dolores!</p>
+        <p>Nuestra academia de cursos permite a los estudiantes <strong>capacitarce y certificar</strong> sus conocimientos
+             en cualquiera de nuestros cursos disponibles, ¿Te gustaría formar parte de alguno?, no lo 
+             pienses dos veces<strong> Inscribete... </strong>
+        </p>
         <div class="container-flex">
             <!--Este container con la propiedad flex lo modifico para que me organise los items
                 que contiene que serían los card, al aplicarle a este modifica sus children(hijos)
             -->
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
-                     ut et suscipit aliquid exercitationem itaque nulla?</p>
+                <h4>HTML</h4>
+                <p>Conoce e integra todas las etiquetas semánticas y practicas prolijas de estructuración 
+                    de un sitio web, de cero a pro.
+                </p>
             </div>
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
-                     ut et suscipit aliquid exercitationem itaque nulla?</p>
+                <h4>CSS</h4>
+                <p>Estiliza todo el dom HTML desde las stylesheet y cambia el aspecto como un profesional,
+                    Sitios web responsive con mediaquery y flex box
+                </p>
             </div>
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
-                     ut et suscipit aliquid exercitationem itaque nulla?</p>
+                <h4>JavaScript</h4>
+                <p>Has sitios web dinamicos e interactua con los eventos de los usuarios, modifica el 
+                    DOM directamente desde js, crea, elimina y más.
+                </p>
             </div>
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
-                     ut et suscipit aliquid exercitationem itaque nulla?</p>
+                <h4>Dart</h4>
+                <p>si ya conoces JS, dart se te hará muy facil, un lenguaje de programación de google
+                    inspirado en react, posible remplazo a futuro de JavaScript.
+                </p>
             </div>
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
-                     ut et suscipit aliquid exercitationem itaque nulla?</p>
+                <h4>Flutter</h4>
+                <p>Un SDK  de Dart, para la construcción multiplaforma, imagina, codea y compilalo 
+                    a web, mobile (android- IOS) y más, un codigo, muchas aplicaciones.</p>
             </div>
 
-            <div class="card grey">
+            <div class="card grey shadow-fucsia">
                 <a>Icono</a>
-                <h4>Subtitle</h4>
+                <h4>Node.js</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam asperiores,
                      ut et suscipit aliquid exercitationem itaque nulla?</p>
             </div>
@@ -163,10 +173,10 @@
     </article>
 
 </section>
-<section id="gallery" class="white">
+<section id="skill" class="white">
     <article>
-        <h4>¿Qué somos capaces de hacer?</h4>
-        <h2>Nuestros servicios</h2>
+        <h4>¿Por qué nos caracterizamos?</h4>
+        <h2>Nuestros Habilidades</h2>
         <h6>Detalles</h6>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur id maiores optio
             magnam quidem eligendi nulla. </p>
@@ -176,19 +186,19 @@
             -->
 
             <div class="card">
-                <a class="fucsia circle">Icono</a>
+                <a class="fucsia circle-icon">Icono</a>
                 <h4>Subtitle</h4>
                 <p>Lorem ipsum, adipisicing elit. </p>
             </div>
 
             <div class="card">
-                <a class="fucsia circle">Icono</a>
+                <a class="fucsia circle-icon">Icono</a>
                 <h4>Subtitle</h4>
                 <p>Lorem ipsum, adipisicing elit. </p>
             </div>
 
             <div class="card">
-                <a class="fucsia circle">Icono</a>
+                <a class="fucsia circle-icon">Icono</a>
                 <h4>Subtitle</h4>
                 <p>Lorem ipsum, adipisicing elit. </p>
             </div>
@@ -197,7 +207,9 @@
     </article>
 
         <div class="black">
-            <a class="white circle"> Icono</a>
+            <a class="white circle-icon"> Icono
+                <!--<i class="fa-solid fa-angle-right"></i>-->
+            </a>
             <p>Lorem ipsum dolor sit amet consectetur</p>
         </div>
 
