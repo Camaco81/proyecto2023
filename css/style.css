@@ -29,11 +29,7 @@ ul{
 a{
     text-decoration: none;
 }
-#logo1{
-    width: 150px;
-    padding-right: 20px;
-    position: center;
-}
+
 p{
     
     margin: 20px 0;
@@ -167,7 +163,7 @@ footer{
 }
 .profesores img{
     height:200px;
-    width: 300px;
+    width: 200px;
     display: flex;
     padding: 2%;
     flex-direction: column;
@@ -176,7 +172,12 @@ footer{
 .profesores{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
+    justify-content: center;
+    align-items: center;
+}
+.profesores div{
+    padding: 10px;
 }
 
 
@@ -243,8 +244,8 @@ footer{
 }
 #skill .card a{
     font-size: 30px;
+    margin-bottom: 10px;
 }
-
 .active{
     color: rgb(255, 0, 76);
 }
@@ -254,6 +255,8 @@ footer{
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 1.5%;
 }
 #third .div2{
@@ -287,4 +290,20 @@ footer{
     background-color: fuchsia;
     color: white;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /*  Extra small devices (phones, 600px and down) 
+        @media only screen and (max-width: 600px) {...}
+        Small devices (portrait tablets and large phones, 600px and up) 
+        @media only screen and (min-width: 600px) {...}
+        Medium devices (landscape tablets, 768px and up) 
+        @media only screen and (min-width: 768px) {...}
+        Large devices (laptops/desktops, 992px and up) 
+        @media only screen and (min-width: 992px) {...}
+        Extra large devices (large laptops and desktops, 1200px and up) 
+        @media only screen and (min-width: 1200px) {...}
+ */
+
+
 }
