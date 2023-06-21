@@ -29,11 +29,7 @@ ul{
 a{
     text-decoration: none;
 }
-#logo1{
-    width: 150px;
-    padding-right: 20px;
-    position: center;
-}
+
 p{
     
     margin: 20px 0;
@@ -111,6 +107,16 @@ nav a:hover { /*Efecto al pasar el mouse*/
     box-shadow: 0px 2px 0px 0px rgb(255, 0, 76, 0.8);
 }
 
+strong{
+    color: rgb(255, 0, 76, 0.8);
+}
+
+section{
+    
+    margin: 2%;
+    text-align: center;
+}
+
 footer{
     text-align: center;
     
@@ -129,12 +135,6 @@ footer{
     flex-direction: column;
     justify-content: center;
 
-}
-
-section{
-    
-    margin: 2%;
-    text-align: center;
 }
 
 #first{
@@ -172,7 +172,12 @@ section{
 .profesores{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
+    justify-content: center;
+    align-items: center;
+}
+.profesores div{
+    padding: 10px;
 }
 
 
@@ -239,8 +244,8 @@ section{
 }
 #skill .card a{
     font-size: 30px;
+    margin-bottom: 10px;
 }
-
 .active{
     color: rgb(255, 0, 76);
 }
@@ -250,6 +255,8 @@ section{
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 1.5%;
 }
 #third .div2{
@@ -284,6 +291,7 @@ section{
     color: white;
     cursor: pointer;
 }
+<<<<<<< HEAD
 #last{
     background-color: white;
     padding: 8% 0 10%;
@@ -319,3 +327,21 @@ section{
     height: 20px;
     cursor: pointer;
 }
+=======
+
+@media (max-width: 768px) {
+    /*  Extra small devices (phones, 600px and down) 
+        @media only screen and (max-width: 600px) {...}
+        Small devices (portrait tablets and large phones, 600px and up) 
+        @media only screen and (min-width: 600px) {...}
+        Medium devices (landscape tablets, 768px and up) 
+        @media only screen and (min-width: 768px) {...}
+        Large devices (laptops/desktops, 992px and up) 
+        @media only screen and (min-width: 992px) {...}
+        Extra large devices (large laptops and desktops, 1200px and up) 
+        @media only screen and (min-width: 1200px) {...}
+ */
+
+
+}
+>>>>>>> f55c7a6231bcb9f699876a0ea6422b758653b335
