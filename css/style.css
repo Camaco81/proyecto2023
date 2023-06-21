@@ -304,6 +304,43 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
     background-color: fuchsia;
     cursor: pointer;
 }
+<<<<<<< HEAD
+#last{
+    background-color: white;
+    padding: 8% 0 10%;
+    text-align: center;
+}
+.modulo img{
+    height:200px ;
+    width:200px ;
+    padding: 2%;
+}
+.modulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.modulo .box{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 250px;
+}
+
+.modulo button{
+    background-color: fuchsia;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+}
+=======
 
 @media (max-width: 768px) {
     /*  Extra small devices (phones, 600px and down) 
@@ -320,3 +357,4 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
 
 
 }
+>>>>>>> f55c7a6231bcb9f699876a0ea6422b758653b335
