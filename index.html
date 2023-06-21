@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto 2023</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Agregar Favicon o logo arriba -->
+    <link rel="icon" href="assets/img/favicon.png">
     <!--aqui importamos la fuente de google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,22 +19,6 @@
 </head>
 
 <body>
-    <header id="main-header">
-        <a>
-            <img src="assets/img/logo.png" />
-        </a>
-        <nav>
-            <ul>
-                <li><a href="" class="active">Inicio</a></li>
-                <li><a href="#third">Servicios</a></li>
-                <li><a href="#secundary">Nosotros</a></li>
-                <li><a href="#course">Cursos</a></li>
-                <li><a href="#gallery">Galería</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
     <section id="first">
         <img src="assets/img/academyProgramer.png">
         <div>
@@ -41,6 +27,23 @@
         </div>
 
     </section>
+    
+    <header id="main-header">
+        <a>
+            <img src="assets/img/logo.png" id="logo" />
+        </a>
+        <nav>
+            <ul id="menu">
+                <li><a href="" class="active menuItem">Inicio</a></li>
+                <li><a href="#third" class="menuItem">Servicios</a></li>
+                <li><a href="#secundary" class="menuItem">Nosotros</a></li>
+                <li><a href="#course" class="menuItem">Cursos</a></li>
+                <li><a href="#gallery" class="menuItem">Galería</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
 
    
     
@@ -81,10 +84,10 @@
     </section>
     
     <section id="fourth">
-        <h2 id="mod5">Toda la informacion</h2>
+        <h2 id="mod5">Toda la información</h2>
         <p class="modi6">Nosotros ofrecemos los mejores cursos  de programación con horarios y presupuestos flexibles</p>
-        <button class="btn1">info</button>
-        <button class="btn2">contac</button>
+        <a class="buttons btn1">Información</a>
+        <a class="buttons btn2">Contacto</a>
 
     </section>
     <section id="course">
@@ -171,7 +174,7 @@
         </article>
     </section>
 
-    <section id="section6">
+    <section class="fucsia">
         <article>
 
             <h4>Información importante</h4>
@@ -179,8 +182,8 @@
             <p>Para garantizar un respaldo de tu codigo en linea,
              visualiarlo y compartirlo con los demás estudiantes</p>
             <br>
-            <a href="" class="buttons">Visitar</a>
-            <a href="" class="buttons">Leer más</a>
+            <a href="" class="buttons btn1">Visitar</a>
+            <a href="" class="buttons btn1">Leer más</a>
         </article>
 
     </section>
@@ -234,6 +237,7 @@
         </div>
 
     </section>
+
     <footer>
         <p>
              &copy 2023 <strong> AcademyProgramer</strong> - Todos los derechos Reservados
