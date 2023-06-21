@@ -2,29 +2,31 @@
     font-family: 'Marmellata';
     src: url('../assets/fonts/Marmellata\(Jam\)_demo.ttf');
 }
+
 /*o google font*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
 
-body{
+body {
     background-color: skyblue;
     /* fuentes básicas */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+
     /*Fuentes de google font
     font-family: 'Roboto';
     */
     /* Fuente local agregada
     font-family: 'Marmellata'; 
     */
-    
+
 
     /*  es mejor este color un blanco no tan blanco
     background-color: #eeebeb;    
@@ -32,56 +34,67 @@ body{
     */
     background-color: rgb(160, 209, 255);
 
- 
+
 }
 
-ul{
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-p{
-    
+p {
+
     margin: 20px 0;
 }
-h1{
+
+h1 {
     font-size: 50px;
     padding: 20px;
 }
 
-.grey{/*creo una clase con solo background para no aplicarlo a todos los card*/
-    
+.grey {
+    /*creo una clase con solo background para no aplicarlo a todos los card*/
+
     background-color: rgb(209, 209, 209);
 }
-.fucsia{/*Igual con esta*/
+
+.fucsia {
+    /*Igual con esta*/
     background-color: rgb(255, 0, 76);
     color: white;
 }
 
-.white{/*Igual con esta*/
+.white {
+    /*Igual con esta*/
     background-color: white;
-}
-.black{/*Igual con esta*/
-    background-color: #222222;
+    color: black;
 }
 
-.circle-icon{ /*Igual con esta*/
-    
+.black {
+    /*Igual con esta*/
+    background-color: #222222;
+    color: white;
+}
+
+.circle-icon {
+    /*Igual con esta*/
+
     border-radius: 50%;
     padding: 10px;
     display: inline-block;
 }
 
-.shadow-fucsia{
-box-shadow: 0px 5px 0px 0px rgb(255, 0, 76) ;
+.shadow-fucsia {
+    box-shadow: 0px 5px 0px 0px rgb(255, 0, 76);
 }
 
-#main-header{
+#main-header {
     display: flex;
     background-color: white;
-    color:black;
+    color: black;
     font-weight: bold;
     padding: 20px 0;
     justify-content: space-around;
@@ -90,15 +103,18 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76) ;
     /* position: fixed; */
     top: 0;
     width: 100%;
-    height: 50px; /*para bajarlo a 30px*/
+    height: 50px;
+    /*para bajarlo a 30px*/
     z-index: 99999;
     transition: .5s ease;
 }
+
 #logo {
     transition: 1s ease;
     height: 50px;
 }
-header ul{
+
+header ul {
     display: flex;
 }
 
@@ -107,60 +123,64 @@ header ul{
     padding: 10px;
     color: black;
     transition: 1s ease;
-    
+
 }
 
-nav a:hover { /*Efecto al pasar el mouse*/
-   
+nav a:hover {
+    /*Efecto al pasar el mouse*/
+
     color: rgb(255, 0, 76);
-    text-decoration:solid;
-    
+    text-decoration: solid;
+
     box-shadow: 0px 2px 0px 0px rgb(255, 0, 76, 0.8);
 }
 
-strong{
+strong {
     color: rgb(255, 0, 76, 0.8);
 }
 
-section{
-    
+section {
+
     margin: 2%;
-    padding:100px 0px ;
+    padding: 100px 0px;
     text-align: center;
 }
-article{
+
+article {
     padding: 0px 5%;
 }
 
-footer{
+footer {
     text-align: center;
-    
+
     background-color: #222222;
-    color:aliceblue;
+    color: aliceblue;
     padding: 20px;
 
-}  
-#first{
-    background-image:linear-gradient(0deg,
-        rgba(0,0,0,0.5)
-    ,rgba(0,0,0,0.5)),
-    url("/assets/img/bg-principal.jpg");
+}
+
+#first {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/assets/img/bg-principal.jpg");
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 0px;
     margin: 0px;
-    height:80vh;
+    height: 85vh;
     color: white;
 }
-#first h2{
+
+#first h2 {
     padding: 10%;
 }
-#first div{
+
+#first div {
     display: flex;
     padding: 2%;
     flex-direction: column;
@@ -168,18 +188,19 @@ footer{
 
 }
 
-#icon .in{
-  align-items: center;
-  display: flex;
+#icon .in {
+    align-items: center;
+    display: flex;
 }
 
 
-#secundary{
+#secundary {
     background-color: aliceblue;
     text-align: center;
     padding: 2.5rem;
 }
-#secundary h2{
+
+#secundary h2 {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -187,38 +208,43 @@ footer{
     margin-inline-end: 0px;
 
 }
-.profesores img{
-    height:200px;
+
+.profesores img {
+    height: 200px;
     width: 200px;
     display: flex;
     padding: 2%;
     flex-direction: column;
     justify-content: center;
 }
-.profesores{
+
+.profesores {
     display: flex;
     flex-wrap: wrap;
 
     justify-content: center;
     align-items: center;
 }
-.profesores div{
+
+.profesores div {
     padding: 10px;
 }
 
 
 
-#course{
+#course {
     background-color: white;
     text-align: center;
 }
-.container-flex{
+
+.container-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 5% 0px;
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,58 +255,65 @@ footer{
     max-width: 250px;
     min-height: 250px;
 }
-.card:hover{
-    
-box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
-0px 5px 5px 5px rgb(255, 0, 76,0.5) ;
+
+.card:hover {
+
+    box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
+        0px 5px 5px 5px rgb(255, 0, 76, 0.5);
 }
 
-.card.grey a{
+.card.grey a {
     color: rgb(255, 0, 76);
 }
-.card img{
+
+.card img {
     border-radius: 15px;
     width: 60%;
     margin: 20px;
-    
+
 }
 
 
-.imagen-centered{
+.imagen-centered {
     width: 100%;
 }
 
-.buttons{
- border: 1px white solid;
- color: white;
- padding: 5px 25px;
- margin: 5px;
+.buttons {
+    border: 1px white solid;
+    color: white;
+    padding: 5px 25px;
+    margin: 5px;
 }
-.buttons:hover{
+
+.buttons:hover {
     background-color: white;
     color: rgb(255, 0, 76);
     padding: 5px 25px;
     margin: 5px;
     font-weight: bold;
-   }
-
- 
-#skill div.black{
+}
+#skill{
+    padding-bottom: 0px;
+}
+#skill div.black {
     padding: 10%;
 }
-#skill div.black p{
+
+#skill div.black p {
     color: white;
 }
-#skill .card a{
+
+#skill .card a {
     font-size: 30px;
     margin-bottom: 10px;
 }
-.active{
+
+.active {
     color: rgb(255, 0, 76) !important;
 }
 
 
-#third{
+#third {
     background-color: aliceblue;
     display: flex;
     flex-direction: row;
@@ -288,46 +321,52 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
     align-items: center;
     padding: 1.5%;
 }
-#third .div2{
+
+#third .div2 {
     display: flex;
     padding: 2%;
     flex-direction: column;
     justify-content: center;
 }
-#third img{
-    height:200px;
-    width:300px;
+
+#third img {
+    height: 200px;
+    width: 300px;
 }
 
 
 
-#fourth{
+#fourth {
     text-align: center;
     background-color: black;
-    color:white;
+    color: white;
     padding: 2rem;
 }
 
-.btn1{
+.btn1 {
     background-color: aliceblue;
     color: black;
     cursor: pointer;
 }
-.btn2{
+
+.btn2 {
     background-color: fuchsia;
     cursor: pointer;
 }
-#last{
+
+#last {
     background-color: white;
     padding: 8% 0 10%;
     text-align: center;
 }
-.modulo img{
-    height:200px ;
-    width:200px ;
+
+.modulo img {
+    height: 200px;
+    width: 200px;
     padding: 2%;
 }
-.modulo{
+
+.modulo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -337,28 +376,109 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
     padding: 2%;
 }
 
-.modulo .box{
+.modulo .box {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     max-width: 250px;
 }
 
-.modulo a{
+.modulo a {
     background-color: fuchsia;
     color: white;
-    border: 1px solid ;
+    border: 1px solid;
     width: 100px;
     height: 20px;
     cursor: pointer;
 }
-.sticky{
+
+.sticky {
     position: fixed;
     top: 0;
 }
-.sticky + #third{
+
+.sticky+#third {
     margin-top: 120px;
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4px;
+    width: 20%;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+#testimony article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#testimony a{
+    color: white;
+    font-size: 20px;
+    padding: 40px;
+    cursor: pointer;
+}
+#testimony img{
+    width: 100px;
+}
+.slide{
+    display: none;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot.active, .dot:hover {
+    background-color: #717171;
+  }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 /*/VERSIO MOBILE*/
 @media (max-width: 768px) {
@@ -373,7 +493,7 @@ box-shadow: 0px 5px 0px 0px rgb(255, 0, 76),
         Extra large devices (large laptops and desktops, 1200px and up) 
         @media only screen and (min-width: 1200px) {...}
  */
- 
-/*aqui iria el codigo necesario para editar la version mobile*/
+
+    /*aqui iria el codigo necesario para editar la version mobile*/
 
 }
