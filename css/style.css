@@ -163,7 +163,7 @@ section{
 }
 .profesores img{
     height:200px;
-    width: 300px;
+    width: 200px;
     display: flex;
     padding: 2%;
     flex-direction: column;
@@ -282,5 +282,40 @@ section{
     width: 80px;
     background-color: fuchsia;
     color: white;
+    cursor: pointer;
+}
+#last{
+    background-color: white;
+    padding: 8% 0 10%;
+    text-align: center;
+}
+.modulo img{
+    height:200px ;
+    width:200px ;
+    padding: 2%;
+}
+.modulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.modulo .box{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 250px;
+}
+
+.modulo button{
+    background-color: fuchsia;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 20px;
     cursor: pointer;
 }
