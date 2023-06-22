@@ -21,29 +21,33 @@
 <body>
 
     <section id="first">
-        <div>
-            <h1>¡Te damos la Bienvenida!</h1>
-            <h2>AcademyProgramer es un instituto el cual fue fundado en el 2020 por
-                <strong> David </strong>y <strong>Marcos</strong> dos emprendedores y educadores en programacion
-            </h2>
-        </div>
+        <article>
 
+            <div>
+                <h1>¡Te damos la Bienvenida!</h1>
+                <h2>AcademyProgramer es un instituto el cual fue fundado en el 2020 por
+                    <strong> David </strong>y <strong>Marcos</strong> dos emprendedores y educadores en programacion
+                </h2>
+            </div>
+
+        </article>
     </section>
 
     <header id="main-header">
-        <a>
-            <img src="assets/img/logo.png" id="logo" />
-        </a>
-        <nav>
-            <ul id="menu">
-                <li><a href="" class="active menuItem">Inicio</a></li>
-                <li><a href="#third" class="menuItem">Servicios</a></li>
-                <li><a href="#secundary" class="menuItem">Nosotros</a></li>
-                <li><a href="#course" class="menuItem">Cursos</a></li>
-                <li><a href="#gallery" class="menuItem">Galería</a></li>
-                <li><a href="#last" class="menuItem">Otros</a></li>
-            </ul>
-        </nav>
+        <div id="logoBoton">
+            <a><img src="assets/img/logo.png" id="logo" /></a>
+            <a href="javascript:void(0);" class="menu-icon" onclick="myFuntion()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+        <ul id="menu" class="ocultar">
+            <li><a href="" class="active menuItem">Inicio</a></li>
+            <li><a href="#third" class="menuItem">Servicios</a></li>
+            <li><a href="#secundary" class="menuItem">Nosotros</a></li>
+            <li><a href="#course" class="menuItem">Cursos</a></li>
+            <li><a href="#gallery" class="menuItem">Galería</a></li>
+            <li><a href="#last" class="menuItem">Otros</a></li>
+        </ul>
 
     </header>
 
@@ -51,47 +55,58 @@
 
 
     <section id="third">
-        <div class="div2">
-            <h2>Nuestros Servicios</h2>
-            <p> Ofrecemos los mejores cursos de programacion en lo que refiere el desarrollo web para todo los niveles y
-                con los mejores precios</p>
-        </div>
+        <article>
+
+            <div class="div2">
+                <h2>Nuestros Servicios</h2>
+                <p> Ofrecemos los mejores cursos de programacion en lo que refiere el desarrollo web para todo los
+                    niveles y
+                    con los mejores precios</p>
+            </div>
+        </article>
         <img src="assets/img/computador-con-lenguajes.jpeg">
     </section>
 
     <section id="secundary">
-        <h2>Nuestros mejores maestros</h2>
-        <div class="profesores">
-            <div>
-                <img src="assets/img/images1.jpeg">
-                <h3>Sofia</h3>
-                <p>Progamadora en python</p>
+        <article>
+
+            <h2>Nuestros mejores maestros</h2>
+            <div class="profesores">
+                <div>
+                    <img src="assets/img/images1.jpeg">
+                    <h3>Sofia</h3>
+                    <p>Progamadora en python</p>
+                </div>
+                <div>
+                    <img src="assets/img/images0.jpeg">
+                    <h3>Manuel</h3>
+                    <p>Progamador frontend</p>
+                </div>
+                <div>
+                    <img src="assets/img/images2.jpeg">
+                    <h3>Josue</h3>
+                    <p>Progamdor backend</p>
+                </div>
+                <div>
+                    <img src="assets/img/daniela.jpeg">
+                    <h3>Daniela</h3>
+                    <p>Programadora en php</p>
+                </div>
             </div>
-            <div>
-                <img src="assets/img/images0.jpeg">
-                <h3>Manuel</h3>
-                <p>Progamador frontend</p>
-            </div>
-            <div>
-                <img src="assets/img/images2.jpeg">
-                <h3>Josue</h3>
-                <p>Progamdor backend</p>
-            </div>
-            <div>
-                <img src="assets/img/daniela.jpeg">
-                <h3>Daniela</h3>
-                <p>Programadora en php</p>
-            </div>
-        </div>
 
 
+        </article>
     </section>
 
     <section id="fourth">
-        <h2 id="mod5">Toda la información</h2>
-        <p class="modi6">Nosotros ofrecemos los mejores cursos de programación con horarios y presupuestos flexibles</p>
-        <a class="buttons btn1">Información</a>
-        <a class="buttons btn2">Contacto</a>
+        <article>
+
+            <h2 id="mod5">Toda la información</h2>
+            <p class="modi6">Nosotros ofrecemos los mejores cursos de programación con horarios y presupuestos flexibles
+            </p>
+            <a class="buttons btn1">Información</a>
+            <a class="buttons btn2">Contacto</a>
+        </article>
 
     </section>
     <section id="course">
@@ -174,7 +189,8 @@
                     <h4>python desde cero</h4>
                     <p>Conoce de este lenguaje de alto nivel y aprende a desarrollar aplicaciones de todo tipo</p>
 
-                </div><!--Cierra container-flex-->
+                </div>
+                <!--Cierra container-flex-->
         </article>
     </section>
 
@@ -229,17 +245,21 @@
                     <p>Abarcamos una amplia gama de redeas sociale. </p>
                 </div>
 
-            </div><!--Cierra container-flex-->
+            </div>
+            <!--Cierra container-flex-->
         </article>
 
         <div class="black">
-            <a class="white circle-icon">
-                <i class="fa-solid fa-angle-down"></i>
-                <!--<i class="fa-solid fa-angle-right"></i>-->
-            </a>
-            <p>Pero aún hay más</p>
+            <article>
+
+                <a class="white circle-icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <!--<i class="fa-solid fa-angle-right"></i>-->
+                </a>
+                <p>Pero aún hay más</p>
         </div>
 
+        </article>
     </section>
 
     <section id="gallery" class="white">
@@ -310,21 +330,21 @@
         <h2>Otros cursos ofertados</h2>
         <div class="modulo">
 
-            <div class="box"><!-- AGREGAR LA CLASE CARD EJEMPLO "box card"-->
+            <div class="box card"><!-- AGREGAR LA CLASE CARD EJEMPLO "box card"-->
                 <img src="assets/img/java.png">
                 <h2>Aprende java desde cero</h2>
                 <p>Crea tus propios programas de escritorio y movil</p>
                 <a class="buttons">Comenzar</a>
             </div>
 
-            <div class="box">
+            <div class="box card">
                 <img src="assets/img/c++.jpeg">
                 <h2>Aprende c++ desde cero</h2>
                 <p>Conoce este lenguaje de bajo nivel</p>
                 <a class="buttons">Comenzar</a>
             </div>
 
-            <div class="box">
+            <div class="box card">
                 <img src="assets/img/c chart.png">
                 <h2>Aprende C# desde cero</h2>
                 <p>Aprende a crear juegos con este lenguaje</p>

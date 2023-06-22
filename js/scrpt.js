@@ -123,3 +123,13 @@ slides[slideIndex-1].style.display="block";
 
 dots[slideIndex-1].className += " active";
 }
+//esta es la funcion de menu para la version movil
+function myFuntion (){
+    var x=document.getElementById("menu") ;
+    x.classList.toggle("ocultar")
+   /*  if(x.style.display ==="flex"){
+        x.style.display="none";
+    }else{
+        x.style.display="flex";
+    } */
+}
