@@ -19,89 +19,78 @@
 </head>
 
 <body>
-    <header id="main-header">
-        <a>
-            <img src="assets/img/logo.png" />
-        </a>
-        <nav>
-            <ul>
-                <li><a href="" class="active">Inicio</a></li>
-                <li><a href="#third">Servicios</a></li>
-                <li><a href="#secundary">Nosotros</a></li>
-                <li><a href="#course">Cursos</a></li>
-                <li><a href="#gallery">Galería</a></li>
-            </ul>
-        </nav>
-
-    </header>
 
     <section id="first">
-        <img src="assets/img/academyProgramer.png">
         <div>
-            <h2 >Información Principal</h2>
-            <p >AcademyProgramer es un instituto el cual fue fundado  en el 2020 por Frederich y Richarter dos emprendedores y educadores en programacion </p>
+            <h1>Información Principal</h1>
+            <h2>AcademyProgramer es un instituto el cual fue fundado en el 2020 por
+                <strong> David </strong>y <strong>Marcos</strong> dos emprendedores y educadores en programacion
+            </h2>
         </div>
 
     </section>
-    
+
     <header id="main-header">
-        <a>
-            <img src="assets/img/logo.png" id="logo" />
-        </a>
-        <nav>
-            <ul id="menu">
+        <div id="logoBoton">
+            <a><img src="assets/img/logo.png" id="logo" /></a>
+            <a href="javascript:void(0);" class="menu-icon" onclick="myFuntion()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+            <ul id="menu" class="ocultar"> 
                 <li><a href="" class="active menuItem">Inicio</a></li>
                 <li><a href="#third" class="menuItem">Servicios</a></li>
                 <li><a href="#secundary" class="menuItem">Nosotros</a></li>
                 <li><a href="#course" class="menuItem">Cursos</a></li>
                 <li><a href="#gallery" class="menuItem">Galería</a></li>
+                <li><a href="#last" class="menuItem">Otros</a></li>
             </ul>
-        </nav>
 
     </header>
 
 
-   
-    
+
+
     <section id="third">
-      <div class="div2">
-        <h2>Nuestros Servicios</h2>
-        <p> Ofrecemos los mejores cursos de programacion en lo que refiere el desarrollo web para todo los niveles y con los mejores precios</p>
-      </div>
-        <img src="assets/img/computador con lenguajes.jpeg" >
+        <div class="div2">
+            <h2>Nuestros Servicios</h2>
+            <p> Ofrecemos los mejores cursos de programacion en lo que refiere el desarrollo web para todo los niveles y
+                con los mejores precios</p>
+        </div>
+        <img src="assets/img/computador con lenguajes.jpeg">
     </section>
 
     <section id="secundary">
         <h2>Nuestros mejores maestros</h2>
         <div class="profesores">
-        <div>
-            <img src="assets/img/images (1).jpeg" >
-            <h3>Sofia</h3>
-            <p>Progamadora en python</p>
-        </div>
-        <div>
-            <img src="assets/img/images.jpeg" >
-            <h3>Manuel</h3>
-            <p>Progamador frontend</p>
-        </div>
-        <div>
-            <img src="assets/img/imges3.jpeg" >
-            <h3>Josue</h3>
-            <p>Progamdor backend</p>
-        </div>
-        <div>
-            <img src="assets/img/descarga.jpeg" >
-            <h3>Daniela</h3>
-            <p>Programadora en php</p>
-        </div>
+            <div>
+                <img src="assets/img/images (1).jpeg">
+                <h3>Sofia</h3>
+                <p>Progamadora en python</p>
+            </div>
+            <div>
+                <img src="assets/img/images.jpeg">
+                <h3>Manuel</h3>
+                <p>Progamador frontend</p>
+            </div>
+            <div>
+                <img src="assets/img/imges3.jpeg">
+                <h3>Josue</h3>
+                <p>Progamdor backend</p>
+            </div>
+            <div>
+                <img src="assets/img/descarga.jpeg">
+                <h3>Daniela</h3>
+                <p>Programadora en php</p>
+            </div>
         </div>
 
 
     </section>
-    
+
     <section id="fourth">
         <h2 id="mod5">Toda la información</h2>
-        <p class="modi6">Nosotros ofrecemos los mejores cursos  de programación con horarios y presupuestos flexibles</p>
+        <p class="modi6">Nosotros ofrecemos los mejores cursos de programación con horarios y presupuestos flexibles</p>
         <a class="buttons btn1">Información</a>
         <a class="buttons btn2">Contacto</a>
 
@@ -163,7 +152,7 @@
                     </a>
                     <h4>php desde cero</h4>
 
-                    <p> Aprende lo que es un servidor y como usarlo para tus paginas web 
+                    <p> Aprende lo que es un servidor y como usarlo para tus paginas web
                     </p>
                 </div>
 
@@ -186,7 +175,8 @@
                     <h4>python desde cero</h4>
                     <p>Conoce de este lenguaje de alto nivel y aprende a desarrollar aplicaciones de todo tipo</p>
 
-                </div><!--Cierra container-flex-->
+                </div>
+                <!--Cierra container-flex-->
         </article>
     </section>
 
@@ -196,7 +186,7 @@
             <h4>Información importante</h4>
             <h2>Con nuestra propia nube</h2>
             <p>Para garantizar un respaldo de tu codigo en linea,
-             visualiarlo y compartirlo con los demás estudiantes</p>
+                visualiarlo y compartirlo con los demás estudiantes</p>
             <br>
             <a href="" class="buttons btn1">Visitar</a>
             <a href="" class="buttons btn1">Leer más</a>
@@ -208,7 +198,7 @@
             <h4>¿Por qué nos caracterizamos?</h4>
             <h2>Nuestros Habilidades</h2>
             <h6>Detalles</h6>
-            <p>Nuestros estudiantes hablan por nosotros y nos resaltan 
+            <p>Nuestros estudiantes hablan por nosotros y nos resaltan
                 en diferentes areas, impulsamos la educación hasta la
                 oportunidad laboral.</p>
             <div class="container-flex">
@@ -241,11 +231,12 @@
                     <p>Abarcamos una amplia gama de redeas sociale. </p>
                 </div>
 
-            </div><!--Cierra container-flex-->
+            </div>
+            <!--Cierra container-flex-->
         </article>
 
         <div class="black">
-            <a class="white circle-icon"> 
+            <a class="white circle-icon">
                 <i class="fa-solid fa-angle-down"></i>
                 <!--<i class="fa-solid fa-angle-right"></i>-->
             </a>
@@ -254,28 +245,28 @@
 
     </section>
     <section id="last">
-        <h1>Otros cursos ofertados</h1>
+        <h2>Otros cursos ofertados</h2>
         <div class="modulo">
 
-            <div  class="box">
-                <img src="assets/img/java.png" >
+            <div class="box">
+                <img src="assets/img/java.png">
                 <h2>Aprende java desde cero</h2>
                 <p>Crea tus propios programas de escritorio y movil</p>
-                <button>Comenzar</button>
+                <a class="buttons">Comenzar</a>
             </div>
 
             <div class="box">
-                <img src="assets/img/c++.jpeg" >
+                <img src="assets/img/c++.jpeg">
                 <h2>Aprende c++ desde cero</h2>
                 <p>Conoce este lenguaje de bajo nivel</p>
-                <button>Comenzar</button>
+                <a class="buttons">Comenzar</a>
             </div>
-            
-            <div class="box"> 
-                <img src="assets/img/c chart.png" >
+
+            <div class="box">
+                <img src="assets/img/c chart.png">
                 <h2>Aprende C# desde cero</h2>
                 <p>Aprende a crear juegos con este lenguaje</p>
-                <button>Comenzar</button>
+                <a class="buttons">Comenzar</a>
             </div>
 
         </div>
@@ -283,11 +274,11 @@
 
     <footer>
         <p>
-             &copy 2023 <strong> AcademyProgramer</strong> - Todos los derechos Reservados
+            &copy 2023 <strong> AcademyProgramer</strong> - Todos los derechos Reservados
         </p>
     </footer>
     <script src="js/scrpt.js"></script>
-    
+
 </body>
 
 </html>
