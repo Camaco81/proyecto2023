@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2023</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Agregar Favicon o logo arriba -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <!--aqui importamos la fuente de google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!--Aquí importamos fontawesome-->
+    <script src="https://kit.fontawesome.com/9fd95bcc65.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="first">
+        <article>
+
+            <div>
+                <h1>¡Te damos la Bienvenida!</h1>
+                <h2>AcademyProgramer es un instituto el cual fue fundado en el 2020 por
+                    <strong> David </strong>y <strong>Marcos</strong> dos emprendedores y educadores en programacion
+                </h2>
+            </div>
+
+        </article>
+    </section>
+
+    <header id="main-header">
+        <div id="logoBoton">
+            <a><img src="assets/img/logo.png" id="logo" /></a>
+            <a href="javascript:void(0);" class="menu-icon" onclick="myFuntion()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+        <ul id="menu" class="ocultar">
+            <li>
+                <a  class="active menuItem">
+                    Inicio
+                </a>
+            </li>
+            <li><a href="#third" class=" menuItem">Servicios</a></li>
+            <li><a href="#secundary" class=" menuItem">Nosotros</a></li>
+            <li><a href="#course" class="  menuItem">Cursos</a></li>
+            <li><a href="#gallery" class="menuItem">Galería</a></li>
+            <li><a href="#last" class="menuItem">Otros</a></li>
+        </ul>
+
+    </header>
+
+
+
+
+    <section id="third">
+        <article>
+
+            <div class="div2">
+                <h2>Nuestros Servicios</h2>
+                <p> Ofrecemos los mejores cursos de programacion en lo que refiere el desarrollo web para todo los
+                    niveles y
+                    con los mejores precios</p>
+            </div>
+        </article>
+        <img src="assets/img/computador-con-lenguajes.jpeg">
+    </section>
+
+    <section id="secundary">
+        <article>
+
+            <h2>Nuestros mejores maestros</h2>
+            <div class="profesores">
+                <div>
+                    <img src="assets/img/images1.jpeg">
+                    <h3>Sofia</h3>
+                    <p>Progamadora en python</p>
+                </div>
+                <div>
+                    <img src="assets/img/images0.jpeg">
+                    <h3>Manuel</h3>
+                    <p>Progamador frontend</p>
+                </div>
+                <div>
+                    <img src="assets/img/images2.jpeg">
+                    <h3>Josue</h3>
+                    <p>Progamdor backend</p>
+                </div>
+                <div>
+                    <img src="assets/img/daniela.jpeg">
+                    <h3>Daniela</h3>
+                    <p>Programadora en php</p>
+                </div>
+            </div>
+
+
+        </article>
+    </section>
+
+    <section id="fourth">
+        <article>
+
+            <h2 id="mod5">Toda la información</h2>
+            <p class="modi6">Nosotros ofrecemos los mejores cursos de programación con horarios y presupuestos flexibles
+            </p>
+            <a class="buttons btn1">Información</a>
+            <a class="buttons btn2">Contacto</a>
+        </article>
+
+    </section>
+    <section id="course">
+        <article>
+            <h4>¿Conoces nuestros cursos?</h4>
+            <h2>Lista de cursos Ofertados</h2>
+            <h6>Detalles</h6>
+            <p>Nuestra academia de cursos permite a los estudiantes <strong>capacitarce y certificar</strong> sus
+                conocimientos
+                en cualquiera de nuestros cursos disponibles, ¿Te gustaría formar parte de alguno?, no lo
+                pienses dos veces<strong> Inscribete... </strong>
+            </p>
+            <div class="container-flex">
+                <!--Este container con la propiedad flex lo modifico para que me organise los items
+                que contiene que serían los card, al aplicarle a este modifica sus children(hijos)
+            -->
+
+                <div class="card grey shadow-fucsia">
+
+                    <a>
+                        <img src="assets/img/html.png" alt="">
+                    </a>
+
+                    <h4>html desde cero</h4>
+                    <p>Conoce e integra todas las etiquetas semánticas y practicas prolijas de estructuración
+                        de un sitio web, de cero a pro.
+                    </p>
+                </div>
+
+                <div class="card grey shadow-fucsia">
+                    <a>
+                        <img src="assets/img/css.png" alt="">
+                    </a>
+                    <h4>CSS desde cero</h4>
+                    <p>Estiliza todo el dom HTML desde las stylesheet y cambia el aspecto como un profesional,
+                        Sitios web responsive con mediaquery y flex box
+                    </p>
+                </div>
+
+                <div class="card grey shadow-fucsia">
+                    <a>
+
+                        <img src="assets/img/javascript.png" alt="">
+                    </a>
+
+                    <h4>javascript desde cero</h4>
+                    <p>Has sitios web dinamicos e interactua con los eventos de los usuarios, modifica el
+                        DOM directamente desde js, crea, elimina y más.
+                    </p>
+                </div>
+
+                <div class="card grey shadow-fucsia">
+                    <a>
+
+
+                        <img src="assets/img/php.png" alt="">
+                    </a>
+                    <h4>php desde cero</h4>
+
+                    <p> Aprende lo que es un servidor y como usarlo para tus paginas web
+                    </p>
+                </div>
+
+                <div class="card grey shadow-fucsia">
+                    <a>
+                        <img src="assets/img/mysql.png" alt="">
+                    </a>
+
+                    <h4>Mysql desde cero</h4>
+                    <p> Aprende a como crear tu propia base de datos para tus sitios web </p>
+                </div>
+
+                <div class="card grey shadow-fucsia">
+                    <a>
+
+                        <img src="assets/img/python.jpeg" alt="">
+                    </a>
+
+
+                    <h4>python desde cero</h4>
+                    <p>Conoce de este lenguaje de alto nivel y aprende a desarrollar aplicaciones de todo tipo</p>
+
+                </div>
+                <!--Cierra container-flex-->
+        </article>
+    </section>
+
+    <section class="fucsia">
+        <article>
+
+            <h4>Información importante</h4>
+            <h2>Con nuestra propia nube</h2>
+            <p>Para garantizar un respaldo de tu codigo en linea,
+                visualiarlo y compartirlo con los demás estudiantes</p>
+            <br>
+            <a href="" class="buttons btn1">Visitar</a>
+            <a href="" class="buttons btn1">Leer más</a>
+        </article>
+
+    </section>
+    <section id="skill" class="white">
+        <article>
+            <h4>¿Por qué nos caracterizamos?</h4>
+            <h2>Nuestros Habilidades</h2>
+            <h6>Detalles</h6>
+            <p>Nuestros estudiantes hablan por nosotros y nos resaltan
+                en diferentes areas, impulsamos la educación hasta la
+                oportunidad laboral.</p>
+            <div class="container-flex">
+                <!--Este container con la propiedad flex lo modifico para que me organise los items
+                que contiene que serían los card, al aplicarle a este modifica sus children(hijos)
+            -->
+
+                <div class="card">
+                    <a class="fucsia circle-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                    <h4>Facil acceso</h4>
+                    <p>Con tu usauario y contraseña personalizado. </p>
+                </div>
+
+                <div class="card">
+                    <a class="fucsia circle-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <h4>Videoconferencias</h4>
+                    <p>Usamos Zoom y Meet para las reuniones</p>
+                </div>
+
+                <div class="card">
+                    <a class="fucsia circle-icon">
+                        <i class="fa-brands fa-facebook"></i>
+
+                    </a>
+                    <h4>Presencia</h4>
+                    <p>Abarcamos una amplia gama de redeas sociale. </p>
+                </div>
+
+            </div>
+            <!--Cierra container-flex-->
+        </article>
+
+        <div class="black">
+            <article>
+
+                <a class="white circle-icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <!--<i class="fa-solid fa-angle-right"></i>-->
+                </a>
+                <p>Pero aún hay más</p>
+        </div>
+
+        </article>
+    </section>
+
+    <section id="gallery" class="white">
+        <article>
+
+            <h4>¿Por qué nos caracterizamos?</h4>
+            <h2>Galería de Imagenes</h2>
+            <h6>Detalles</h6>
+            <p>Click en los botones de abajo para ordenar las filas.</p>
+            <button class="btn" onclick="oneColumn()">1 Columna</button>
+            <button class="btn" onclick="twoColumns()">2 Columnas</button>
+            <button class="btn active" onclick="fourColumns()">4 Columnas</button>
+
+            <div class="row">
+                <div class="column">
+                    <img src="assets/img/images0.jpeg">
+                    <img src="assets/img/images1.jpeg">
+                    <img src="assets/img/images2.jpeg">
+                    <img src="assets/img/images3.jpeg">
+                    <img src="assets/img/images4.jpg">
+                    <img src="assets/img/images5.jpg">
+                </div>
+                <div class="column">
+                    <img src="assets/img/images1.jpeg">
+                    <img src="assets/img/images5.jpg">
+                    <img src="assets/img/images4.jpg">
+                    <img src="assets/img/images2.jpeg">
+                    <img src="assets/img/images0.jpeg">
+                    <img src="assets/img/images3.jpeg">
+                </div>
+                <div class="column">
+                    <img src="assets/img/images3.jpeg">
+                    <img src="assets/img/images4.jpg">
+                    <img src="assets/img/images1.jpeg">
+                    <img src="assets/img/images0.jpeg">
+                    <img src="assets/img/images5.jpg">
+                    <img src="assets/img/images2.jpeg">
+                </div>
+                <div class="column">
+                    <img src="assets/img/images5.jpg">
+                    <img src="assets/img/images2.jpeg">
+                    <img src="assets/img/images3.jpeg">
+                    <img src="assets/img/images0.jpeg">
+                    <img src="assets/img/images1.jpeg">
+                    <img src="assets/img/images4.jpg">
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <section id="last">
+        <!-- 
+            DENTRO DE UN SECTION NORMALMENTE VA UN ARTICLE EJEMPLO:
+            
+         <section>
+            <article>
+                <h2></h2>
+                <img src="" alt="">
+                <p></p>
+            </article>
+         </section>
+            
+         ESTO PARA QUE SE VEA MASS ORDENADO.. 
+         Y CON SHIFT + ALT + F
+         FORMATEAS EL CODIGO PARA QUE SE ORDENE
+         -->
+        <h2>Otros cursos ofertados</h2>
+        <div class="modulo">
+
+            <div class="box card"><!-- AGREGAR LA CLASE CARD EJEMPLO "box card"-->
+                <img src="assets/img/java.png">
+                <h2>Aprende java desde cero</h2>
+                <p>Crea tus propios programas de escritorio y movil</p>
+                <a class="buttons">Comenzar</a>
+            </div>
+
+            <div class="box card">
+                <img src="assets/img/c++.jpeg">
+                <h2>Aprende c++ desde cero</h2>
+                <p>Conoce este lenguaje de bajo nivel</p>
+                <a class="buttons">Comenzar</a>
+            </div>
+
+            <div class="box card">
+                <img src="assets/img/c chart.png">
+                <h2>Aprende C# desde cero</h2>
+                <p>Aprende a crear juegos con este lenguaje</p>
+                <a class="buttons">Comenzar</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimony" class="black">
+        <article>
+            <a onclick="plusSlides(-1)"><i class="fa-solid fa-angle-left"></i></a>
+
+            <div id="slides-container">
+
+                <div class="slide fade">
+                    <img src="assets/img/daniela.jpeg" alt="" class="circle-icon">
+                    <h2>Daniela</h2>
+                    <i>"Decidí inscribirme en esta academia de cursos de programación debido a las excelentes
+                        recomendaciones
+                        que recibí, ¡y no me decepcionó en absoluto! Los maestros son increíbles, tienen una amplia
+                        experiencia
+                        en la industria y están comprometidos con el éxito de sus estudiantes. Las clases virtuales son
+                        interactivas y dinámicas, lo que facilita el aprendizaje y la participación activa. Gracias a
+                        esta academia,
+                        he podido mejorar mis habilidades de programación y avanzar en mi carrera profesional con
+                        confianza.
+                        ¡La recomiendo totalmente a todos aquellos que deseen aprender a programar de manera efectiva y
+                        con
+                        un enfoque práctico!"</i>
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/images0.jpeg" alt="" class="circle-icon">
+                    <h2>Carlos</h2>
+                    <i>"Como principiante en la programación, encontré en esta academia el lugar perfecto para
+                        iniciar mi aprendizaje. Las clases virtuales me permitieron avanzar a mi propio ritmo
+                        y los maestros fueron realmente pacientes y comprensivos. A través de ejemplos prácticos
+                        y proyectos reales, pude aplicar los conceptos que aprendía en clase y fortalecer mis
+                        habilidades.
+                        Estoy muy agradecido con esta academia por brindarme una base sólida en programación y
+                        abrirme las puertas a un mundo de oportunidades profesionales."</i>
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/images1.jpeg" alt="" class="circle-icon">
+                    <h2>Maria</h2>
+                    <i>"Me encantó la experiencia de aprender en esta academia de cursos de programación.
+                        Los maestros son realmente excelentes y están altamente capacitados en sus respectivas
+                        áreas. Las clases virtuales fueron muy interactivas y dinámicas, lo que me permitió
+                        adquirir los conocimientos de manera efectiva. Además, siempre estuvieron dispuestos
+                        a responder mis preguntas y brindarme apoyo adicional cuando lo necesitaba.
+                        ¡Recomiendo esta academia a cualquiera que esté interesado en aprender a programar!"</i>
+                </div>
+                <div class="slide fade">
+                    <img src="assets/img/images2.jpeg" alt="" class="circle-icon">
+                    <h2>Luis</h2>
+                    <i>"Como profesional en busca de una actualización en mis habilidades de programación, encontré en
+                        esta academia la opción perfecta. Los cursos virtuales están diseñados de manera efectiva,
+                        cubriendo tanto los fundamentos como las tecnologías más avanzadas. Los maestros son expertos en
+                        su campo y se esfuerzan por brindar un aprendizaje de calidad. Además, la comunidad de
+                        estudiantes es muy colaborativa y enriquecedora. Gracias a los cursos que tomé en esta academia,
+                        pude ampliar mis conocimientos y mejorar mi perfil profesional. ¡No podría estar más satisfecho
+                        con mi experiencia!"</i>
+                </div>
+
+            </div>
+            <a onclick="plusSlides(1)"><i class="fa-solid fa-angle-right"></i></a>
+        </article>
+        <!-- The dots/circles -->
+        <div id="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            &copy 2023 <strong> AcademyProgramer</strong> - Todos los derechos Reservados
+        </p>
+    </footer>
+   
+    <script src="js/scrpt.js"></script>
+
+</body>
+
+</html>
