@@ -1,0 +1,38 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+}
+.cuadro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: green;/* 
+    background-image: url("/juego-web/agujero.png");
+    background-size: contain; */
+}
+#contenedor{
+    width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.topo{
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+.show{
+    display: block;
+}
