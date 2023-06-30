@@ -85,6 +85,9 @@ function btnActive(button) {
     }
 }
 
+//Cambia el boton activo del header
+
+
 //USAR EL CODIGO ANTERIOR ↑↑↑ 
 //PARA CAMBIAR EL BOTON ACTIVO DEL MENU DEL HEADER
 
@@ -160,4 +163,29 @@ function removerClase() {
 function agregarClase(j) {
     //agregar nueva clase llamada active
     menuItems[j].classList.add("active");
+}
+
+function menuItemsActive(){
+    let menuItems = document.getElementsByClassName("menuItem");
+    console.log(menuItem);
+}
+
+var menuItems = document.getElementsByClassName("menuItem");
+
+for (let j = 0; j < menuItems.length; j++) {
+    menuItems[j].addEventListener("click",function (){
+        removerClase();
+        agregarClase(j);
+        }
+    )    
+}
+
+function  removerClase(){
+    for (let k = 0; k < menuItems.length; k++) {
+    menuItems[k].classList.remove("active");       
+    }
+}
+
+function  agregarClase(){
+    menuItems[k].classList.add("active");  
 }
