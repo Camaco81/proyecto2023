@@ -18,9 +18,9 @@ body{
     margin: 20px;
     width: 100px;
     height: 100px;/* 
-    background-color: green;
+    background-color: green; */
     background-image: url("/juego-web/agujero.png");
-    background-size: contain; */
+    background-size: contain;
 }
 #contenedor{/* 
     padding-top: 50px; */
