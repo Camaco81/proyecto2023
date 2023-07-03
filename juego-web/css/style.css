@@ -19,7 +19,7 @@ body{
     width: 100px;
     height: 100px;/* 
     background-color: green; */
-    background-image: url("/juego-web/agujero.png");
+    background-image: url("/juego-web/asess/img/agujero.png");
     background-size: contain;
 }
 #contenedor{/* 
@@ -27,7 +27,7 @@ body{
     width: 420px;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(/juego-web/fondo.png);
+    background-image: url(/juego-web/asess/img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -187,5 +187,5 @@ function  removerClase(){
 }
 
 function  agregarClase(){
-    menuItems[k].classList.add("active");  
+    menuItems[j].classList.add("active");  
 }
