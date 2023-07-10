@@ -30,6 +30,7 @@ body{
     background-image: url(/juego-web/asess/img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top:20% ;
 }
 .topo{
     width: 100px;
@@ -38,4 +39,15 @@ body{
 }
 .show{
     display: block;
+}
+
+.mostrador{
+font-family: 'Courier New', Courier, monospace;
+position: absolute;
+margin-bottom: 35%;
+margin-left: 2%;
+background-image:url(/juego-web/asess/img/fondo.jpg);
+border-radius: 10%;
+padding: 2%;
+    
 }

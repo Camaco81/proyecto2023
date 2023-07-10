@@ -5,6 +5,22 @@ var score = 0;
 //seleccionamos la etiqueta donde vamos a mostrar el score guardado
 const spanScore = document.getElementById('puntaje')
 
+window.onload = init;
+
+function init(){
+
+    //selcciono el id y le agrego un evento que al dar click me ejecuta una funcion que pausa el juego
+   
+   document.querySelector("#parar").addEventListener("click",pausa);
+   
+   //selcciono el id y le agrego un evento que al dar click me ejecuta una funcion que reanuda el juego donde queda
+   
+    document.querySelector("#continuar").addEventListener("click",reanudar);
+
+    reanudar();
+   }
+
+
 //recorremos todo el array de topos y para cada uno le agregamos 
 //un evento que al hacer click se ejecute una funcion
 topos.forEach(function (element) {
@@ -19,7 +35,7 @@ topos.forEach(function (element) {
 })
 
 
-var cronometro = setInterval(time, 1000);
+var cronometro;
 var segundos = 0;
 var minutos = 0;
 const tiempo = document.getElementById("tiempo")
@@ -73,6 +89,17 @@ function numEnt() {
     return Math.floor(Math.random() * 9);
 }
 
+
+
+function pausa(){
+    clearInterval(cronometro);
+   
+}
+
+function reanudar(){
+    cronometro= setInterval(time,1000);
+    
+}
 
 
 
