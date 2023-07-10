@@ -47,6 +47,8 @@ function time() {
         tiempo.textContent = minutos + ":" +segundos;
     }
 
+    levelUp()
+
 
 }
 
@@ -73,11 +75,25 @@ function numEnt() {
     return Math.floor(Math.random() * 9);
 }
 
+function levelUp(){
+    if( minutos === 2 || score ===300){
+        console.log('nivel superado');
+        detener();
+        return true
 
+    }else{
+        return false
+    }
 
-
-
-
+}
+//detener intervalo
+function detener() {
+    setTimeout(function () {
+        clearInterval(cronometro);
+        console.log("Intervalo detenido")
+    })
+    
+}
 
 
 
