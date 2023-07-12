@@ -5,6 +5,24 @@ var score = 0;
 //seleccionamos la etiqueta donde vamos a mostrar el score guardado
 const spanScore = document.getElementById('puntaje')
 
+//modales pause y dinamico
+const tituloModal = document.getElementById("tituloModal");
+const textoModal = document.getElementById("textoModal");
+const   boton1Modal = document.getElementById("boton1Modal");
+const    boton2Modal= document.getElementById("boton2Modal");
+
+
+// CREAMOS UN OBJETO
+const niveles = [
+    //los objetos contienen niveles
+    [2,0,20,
+        9], // [minutos, segundos, puntaje, huecos]
+    [1,30,10,9],
+    [1,0,5,12],
+]
+    
+    
+
 window.onload = init;
 
 function init() {
@@ -64,7 +82,7 @@ function time() {
         tiempo.textContent = minutos + ":" + segundos;
     }
 
-    levelUp()
+    comprobarGanarPerder()
 
 
 }
@@ -92,17 +110,27 @@ function numEnt() {
     return Math.floor(Math.random() * 9);
 }
 
-function levelUp() {
-    if (score >= 50) {
-       
+var nivel  = 0;
+function levelUp(){
+    nivel++,
+    reiniciar();
+    if ( nivel > niveles.length -1){
+        modalShow("Felicidades", "Has terminado todos los niveles" ,"Volver a inicio")
+    }
+}
+function comprobarGanarPerder() {
+    
+    // donde [primero es nivel] [ posiciones]
+    if (score >= niveles[nivel][2]) {
+
         detener();
-        modalShow("Felicidades", "Has completado este nivel");
+        modalShow("Felicidades", "Has completado este nivel" , "Reiniciar", "Siguiente");
         return true
-    } else if (minutos >= 2) {
+    } else if (minutos === niveles[nivel][0] && segundos === niveles[nivel][1] ) {
         console.log("funciona")
 
         detener();
-        modalShow("Game Over","¡Mejor suerte la proxima!");
+        modalShow("Game Over", "¡Mejor suerte la proxima!", "Reiniciar", "");
         return true
 
     } else {
@@ -124,6 +152,7 @@ function pausa() {
 function reanudar() {
     cronometro = setInterval(time, 1000);
     pauseModal.style.display = "none";
+    modal.style.display = "none";
 
 }
 function reiniciar() {
@@ -164,15 +193,21 @@ window.addEventListener("click", function (event) {
     }
 }); */
 
-function modalShow(titulo, texto) {
+function modalShow(titulo, texto, boton1, boton2) {
     modal.style.display = "block";
     tituloModal.textContent = titulo;
     textoModal.textContent = texto;
-    console.log("$titulo /n $texto")
+    boton1Modal.textContent = boton1;
+    boton2Modal.textContent = boton2;
+    if (boton2Modal.textContent === "") {
+        boton2Modal.style.display="none"
+    } else{
+        
+        boton2Modal.style.display="inline-block"
+    }
+    if (boton1Modal.textContent === "Volver a inicio") {
+        boton1Modal.setAttribute("href", "inicio.html")
+    } 
 }
 
-
-
-const tituloModal = document.getElementById("tituloModal");
-const textoModal = document.getElementById("textoModal");
 

@@ -56,27 +56,29 @@
 
     <button id="abrirModal">Abrir Modal</button>
     <button id="botonPause">Abrir Pause</button>
+
     <!-- Ventana modal, por defecto no visible -->
     <div id="ventanaModal" class="modal">
         <div class="contenido-modal">
             <h2 id="tituloModal">Titulo modal</h2>
             <p id="textoModal">Esto es el texto de la ventana</p>
 
-            <img src="asess/img/descarga.jpeg" class="img20">
+            <img src="asess/img/topoperfil.png" class="img20">
 
             <div>
-                <a href="" class="boton">Reiniciar</a>
-                <a href="" class="boton">Siguiente Nivel</a>
+                <a id="boton1Modal" class="boton" onclick="reiniciar()">Reiniciar</a>
+                <a id="boton2Modal" class="boton" onclick="levelUp()">Siguiente</a>
             </div>
         </div>
     </div>
+
     <!-- Ventana modalPAUSE, por defecto no visible -->
     <div id="pauseModal" class="modal">
         <div class="contenido-modal">
             <h2 id="tituloModal">Menu Pause</h2>
             <p id="textoModal">El juego está Pausado</p>
 
-            <img src="asess/img/descarga.jpeg" class="img20">
+            <img src="asess/img/topoperfil.png" class="img20">
 
             <div>
                 <a id="continuar" class="boton">Reanudar</a>

@@ -3,6 +3,9 @@
     margin: 0;
     text-decoration: none;
 }
+a{
+  display: inline-block;
+}
 
 body {
     display: flex;
@@ -119,10 +122,10 @@ h2 {
     justify-content: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
-
+/* 
   .contenido-modal img{
     border-radius: 80%;
-  }
+  } */
  
   /* Animación */
   @-webkit-keyframes animatetop {
