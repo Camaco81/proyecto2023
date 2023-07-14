@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/juego-web/asess/img/fondo.jpg);
+    background-image: url(/juego-web/assets/img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,8 +27,12 @@ body {
     height: 100px;
     /* 
     background-color: green; */
-    background-image: url("/juego-web/asess/img/agujero.png");
+    background-image: url("/juego-web/assets/img/agujero.png");
     background-size: contain;
+    
+}
+.bg-rojo{
+  background:  linear-gradient(rgb(192, 0, 0),Red);
 }
 
 #contenedor {
@@ -37,16 +41,19 @@ body {
     width: 420px;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(/juego-web/asess/img/fondo.png);
+    background-image: url(/juego-web/assets/img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 20px;
+    cursor: url(/juego-web/assets/img/maze.png) 20 20,pointer;
 }
 
 .topo {
     width: 100px;
     height: 100px;
     display: none;
+    transform: rotateY(0deg);
+    animation: 0.5s ease-in-out ;
 }
 
 .show {
@@ -83,7 +90,7 @@ h2 {
     background-color: #5fff33;
     font-weight: bold;
     text-align: center;
-    cursor: pointer;
+    cursor : pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -157,3 +164,6 @@ h2 {
     height: 20vh;
   } 
   
+  .rotar180{
+    transform : rotateY(180deg);
+  }

@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplastar el topo</title>
     <link rel="stylesheet" href="css/styleDeInicio.css">
-    <link rel="shortcut icon" href="asess/img/topo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/topo.png" type="image/x-icon">
 </head>
-<body>
+<body id="body">
 <section>
     <div class="login">
-        <img src="asess/img/descarga.jpeg">
+        <img src="assets/img/topoperfil.png">
         <h1>Aplasta al toppo</h1>
-        <a href="/juego-web/juego.html"><b>comenzar</b></a>
+        <a href="/juego-web/juego.html" onclick="startSound.play();"><b>comenzar</b></a>
     </div>
 </section>
 
         
 
        
+    <button id="btnReproducir">Reproducir sonido</button>
+    <button id="btnPausar">Pausar sonido</button>
+    <button id="btnReiniciar">Ir a inicio de sonido</button>
+
   
+<script src="/juego-web/js/inicio.js"></script>
 
 </body>
 </html>
