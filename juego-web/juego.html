@@ -10,12 +10,13 @@
 </head>
 
 <body>
-    <header class="mostrador">
-        <div id="marcadores">
+    <header class="mostrador
+">
+        <div id="marcadores" class="bg-2">
 
             <h3>PTS: <span id="puntaje">0</span></h3>
-            <h3>Time: <span id="tiempo">00:00</span></h3>
-            <h3>Dificultad: Nivel <span id="dificultad">1</span></h3>
+            <h3><span id="tiempo">00:00</span></h3>
+            <h3>Nivel <span id="dificultad">1</span></h3>
         </div>
         <div>
             <a id="parar" class="boton">Pausa</a>
@@ -23,40 +24,13 @@
 
     </header>
     <section id="contenedor">
-
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo " src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo " src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo " src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
-        <div class="cuadro">
-            <a><img class="topo" src="/juego-web/assets/img/topo-solo.png" alt=""></a>
-        </div>
     </section>
 
 
+    <audio id="music" src="assets/sound/music.mp3" autoplay preload="auto" controls="none" style="display: none;"></audio>
     <!-- Ventana modal, por defecto no visible -->
-    <div id="ventanaModal" class="modal">
-        <div class="contenido-modal">
+    <div id="ventanaModal" class="modal ">
+        <div class="contenido-modal  bg-3">
             <h2 id="tituloModal">Titulo modal</h2>
             <p id="textoModal">Esto es el texto de la ventana</p>
 
@@ -71,7 +45,7 @@
 
     <!-- Ventana modalPAUSE, por defecto no visible -->
     <div id="pauseModal" class="modal">
-        <div class="contenido-modal">
+        <div class="contenido-modal bg-1">
             <h2 id="tituloModal">Menu Pause</h2>
             <p id="textoModal">El juego está Pausado</p>
 

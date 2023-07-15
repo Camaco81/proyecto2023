@@ -1,169 +1,259 @@
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
-a{
+
+a {
   display: inline-block;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/juego-web/assets/img/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/juego-web/assets/img/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 
 .cuadro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    margin: 20px;
-    width: 100px;
-    height: 100px;
-    /* 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 20px;
+  width: 15vh;
+  height: 15vh;
+  /* 
     background-color: green; */
-    background-image: url("/juego-web/assets/img/agujero.png");
-    background-size: contain;
-    
+  background-image: url("/juego-web/assets/img/agujero.png");
+  background-size: contain;
+
 }
-.bg-rojo{
-  background:  linear-gradient(rgb(192, 0, 0),Red);
+
+.bg-rojo {
+  background: linear-gradient(rgb(192, 0, 0), Red);
 }
 
 #contenedor {
-    /* 
+  /* 
     padding-top: 50px; */
-    width: 420px;
-    display: flex;
-    flex-wrap: wrap;
-    background-image: url(/juego-web/assets/img/fondo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 20px;
-    cursor: url(/juego-web/assets/img/maze.png) 20 20,pointer;
+    max-width: 420px;
+    min-width: 320px;
+    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/juego-web/assets/img/fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  cursor: url(/juego-web/assets/img/maze.png) 20 20, pointer;
 }
 
 .topo {
-    width: 100px;
-    height: 100px;
-    display: none;
-    transform: rotateY(0deg);
-    animation: 0.5s ease-in-out ;
+  width: 100px;
+  height: 100px;
+  display: none;
+  transform: rotateY(0deg);
+  animation: 0.5s ease-in-out;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .mostrador {
-    font-family: 'Courier New', Courier, monospace;
-    width: 100%;
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;/* 
+  padding: 20px 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #marcadores {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    padding: 20px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 0;
 
 }
 
 h2 {
-    display: block;
+  display: block;
 }
 
 .boton {
-    padding: 5px 15px;
-    margin: 15px;
-    border: 2px solid #26bb2f;
-    border-radius: 15px;
-    color: #123f15;
-    background-color: #5fff33;
-    font-weight: bold;
-    text-align: center;
-    cursor : pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px;
+  width: 20vw;
+  min-width: 85px;
+  max-width: 150px;
+  margin: 5px;
+  border: 1px solid rgb(6, 153, 6);
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(rgb(6, 153, 6), #043d10);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+
 
 }
 
+.bg-1{
+  background:
+  linear-gradient(-45deg,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(255, 255, 255, 1)75%,
+    rgba(255, 255, 255, 1)85%,
+    rgba(0, 0, 0, 0) 85%),
+  linear-gradient(135deg, lightsteelblue 0%,  #1d995b 40%, #043d10);
+  ; 
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+  border: 2px solid #5e2906;
+}
+
+.bg-2{
+  background:
+  linear-gradient(45deg,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(255, 255, 255, 1)75%,
+    rgba(255, 255, 255, 1)85%,
+    rgba(0, 0, 0, 0) 85%),
+  linear-gradient(135deg, lightsteelblue 0%,  #1d995b 40%, #043d10);
+  ; 
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+  border: 2px solid #5e2906;
+}
+.bg-3{
+  background:
+  linear-gradient(0deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(255, 255, 255, 1)40%,
+    rgba(255, 255, 255, 1)60%,
+    rgba(0, 0, 0, 0) 60%),
+  linear-gradient(135deg, lightsteelblue 0%,  #1d995b 40%, #043d10);
+  ; 
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+  border: 2px solid #5e2906;
+}
 
 /***********MODAL***********/
 /* Fondo modal: negro con opacidad al 50% */
 .modal {
-    display: none; /* Por defecto, estará oculto */
-    position: fixed; /* Posición fija */
-    z-index: 1; /* Se situará por encima de otros elementos de la página*/
-    padding-top: 25vh; /* El contenido estará situado a 200px de la parte superior */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Algura completa */
-    overflow: auto; /* Se activará el scroll si es necesario */
-    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+  display: none;
+  /* Por defecto, estará oculto */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* Posición fija */
+  z-index: 1;
+  /* Se situará por encima de otros elementos de la página*/
+  /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Algura completa */
+  overflow: auto;
+  /* Se activará el scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Color negro con opacidad del 50% */
 }
+/* Ventana o caja modal */
+.contenido-modal {
+  text-align: center;
+  position: relative;
+  /* Relativo con respecto al contenedor -modal- */
   
-  /* Ventana o caja modal */
-  .contenido-modal {
-    position: relative; /* Relativo con respecto al contenedor -modal- */
-    background-color: lightsteelblue;
-    margin: auto; /* Centrada */
-    padding: 30px;
-    width: 60%;
-    height: 40vh;
-    -webkit-animation-name: animarsuperior;
-    -webkit-animation-duration: 0.5s;
-    animation-name: animarsuperior;
-    animation-duration: 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-  }
+  margin: auto;
+  /* Centrada */
+  padding: 30px;
+  width: 60%;
+  max-width: 500px;
+  min-height: 40vh;
+  -webkit-animation-name: animarsuperior;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+}
+
 /* 
   .contenido-modal img{
     border-radius: 80%;
   } */
- 
-  /* Animación */
+
+/* Animación */
+/* 
   @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
-  }
-  
-  @keyframes animarsuperior {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* Botón cerrar */
-  .close {
-    color: black;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: rgba(0, 0, 0, 0.89);
-    text-decoration: none;
-    cursor: pointer;
+  } */
+
+@keyframes animarsuperior {
+  from {
+    top: -300px;
+    opacity: 0
   }
 
-  .img20{
-    height: 20vh;
-  } 
-  
-  .rotar180{
-    transform : rotateY(180deg);
+  to {
+    top: 0;
+    opacity: 1
   }
+}
+
+/* Botón cerrar */
+.close {
+  color: black;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(0, 0, 0, 0.89);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.img20 {
+  height: 20vh;
+}
+
+.rotar180 {
+  transform: rotateY(180deg);
+}
+
+/***************INICIO*******************/
+
+.login{
+   color: rgb(0, 44, 10); ;
+   text-align: center;
+   padding: 20px;
+   justify-content: baseline;
+   font-size: 20px;
+   margin: 20px;
+   width: 520px;
+   height: 350px;
+   border: 4px solid #50ea19;
+   border-radius: 50%;
+   
+}
