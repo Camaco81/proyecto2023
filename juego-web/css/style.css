@@ -147,7 +147,22 @@ h2 {
 
   border: 2px solid #5e2906;
 }
+.ajustes{
+  margin: 20px;
+  padding: 20px 0px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  border: 1px solid rgb(6, 153, 6);
+  background-color: rgba(255,255,255,.3);
+}
+.ajustes span{
+    display: inline-block;
+    width: 10px;
+  }
 /***********MODAL***********/
 /* Fondo modal: negro con opacidad al 50% */
 .modal {

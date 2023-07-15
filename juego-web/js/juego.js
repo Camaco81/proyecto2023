@@ -56,7 +56,8 @@ hueco.style.width = "10vh"
             //a la etiqueta le cambiamos la propiedad textcontent
             // por el valor que tenemos del score
             spanScore.textContent = score;
-            element.classList.remove("show")
+            element.classList.remove("show");
+            contenedor.style.cursor =" url(/juego-web/assets/img/maze1.png) 20 20, pointer";
         });
         
     })
@@ -142,7 +143,9 @@ function time() {
 
 
 function aparecer(parmetro) {
-    topos[parmetro].classList.add('show')
+    topos[parmetro].classList.add('show');
+    
+    contenedor.style.cursor =" url(/juego-web/assets/img/maze.png) 20 20, pointer";
 }
 function desaparecer(parmetro) {
     topos[parmetro].classList.remove("show")
@@ -157,7 +160,7 @@ function levelUp() {
     scoreTotal = score;
     clearInterval(cronometro);
     if (nivel > niveles.length - 1) {
-        modalShow("Felicidades", "Has terminado todos los niveles", "Volver a inicio")
+        modalShow("¡FELICIDADES!", "Has terminado todos los niveles", "Volver a inicio")
     } else {
         //seteo en 0 las variables
         /*  score = 0; */
@@ -204,9 +207,9 @@ function comprobarGanarPerder() {
     if (minutos >= niveles[nivel][0] && segundos >= niveles[nivel][1]) {
         //al terminar el tiempo
         if (score >= niveles[nivel][2]) {
-            modalShow("Felicidades", "Has completado este nivel", "Reiniciar", "Siguiente");
+            modalShow("¡FELICIDADES!", "Has completado este nivel", "Reiniciar", "Siguiente");
         } else {
-            modalShow("Game Over", "¡Mejor suerte la proxima!", "Reiniciar", "");
+            modalShow("¡OH, NO, LO SIENTO!", "¡Mejor suerte la proxima!", "Reiniciar", "");
         }
         //se detiene y retorna true
         detener();

@@ -27,7 +27,8 @@
     </section>
 
 
-    <audio id="music" src="assets/sound/music.mp3" autoplay preload="auto" controls="none" style="display: none;"></audio>
+    <audio id="music" src="assets/sound/music.mp3" autoplay preload="auto" controls="none"
+        style="display: none;"></audio>
     <!-- Ventana modal, por defecto no visible -->
     <div id="ventanaModal" class="modal ">
         <div class="contenido-modal  bg-3">
@@ -46,14 +47,18 @@
     <!-- Ventana modalPAUSE, por defecto no visible -->
     <div id="pauseModal" class="modal">
         <div class="contenido-modal bg-1">
-            <h2 id="tituloModal">Menu Pause</h2>
+            <h2 id="tituloModal">MENU PAUSE</h2>
             <p id="textoModal">El juego está Pausado</p>
-
-            <button id="btnReproducir">Reproducir sonido</button>
-            <button id="btnPausar">Pausar sonido</button>
-            <button id="btnReiniciar">Ir a inicio de sonido</button>
-        
+           
+            <div class="ajustes">
+                
+                <a>Reproducir sonido<span class="boton" id="btnReproducir">♫</span></a>
+                <a> Pausar sonido<span class="boton" id="btnPausar">♫</span></a>
+                <a> Ir a inicio de sonido<span class="boton" id="btnReiniciar">♫</span></a>
+            </div>
+            
             <img src="assets/img/topoperfil.png" class="img20">
+            
 
             <div>
                 <a id="continuar" class="boton">Reanudar</a>
