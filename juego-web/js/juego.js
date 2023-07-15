@@ -1,8 +1,8 @@
-//seleccionamos todos los topos
-const topos = document.querySelectorAll(".topo");
 //creamos una variable para guardar el score
 var score = 0;
 var scoreTotal = 0;
+var nivel = 0;
+var topos = 0;
 //seleccionamos la etiqueta donde vamos a mostrar el score guardado
 const spanScore = document.getElementById('puntaje')
 
@@ -17,14 +17,63 @@ const dificultad = document.getElementById("dificultad");
 // CREAMOS UN OBJETO
 const niveles = [
     //los objetos contienen niveles
-    [0, 10, 20, 1000, 9], // [minutos, segundos, puntaje, milisegundos, huecos]
-    [0, 30, 20, 700, 9],
-    [1, 0, 50, 500, 9],
-    [0, 45, 50, 500, 12],
+    [0, 20, 20, 1000, 9], // [minutos, segundos, puntaje, milisegundos, huecos]
+    [0, 30, 70, 700, 9],
+    [1, 40, 150, 500, 9],
+    [0, 50, 200, 500, 12],
+    [1, 0, 250, 400, 16],
+    [1, 30, 350, 350, 20],
 ]
 
+const contenedor = document.getElementById("contenedor")
+function crearHuecoTopos(numTopos) {
+
+    for (let i = 0; i < numTopos; i++) {
+        let hueco = document.createElement("div");
+        hueco.setAttribute("class", "cuadro");
+        let topo = document.createElement("a");
+        let imgTopo = document.createElement("img");
+        imgTopo.setAttribute("class", "topo");
+        imgTopo.setAttribute("src", "/juego-web/assets/img/topo-solo.png");
+        topo.appendChild(imgTopo);
+        hueco.appendChild(topo);
+        contenedor.appendChild(hueco);
+        if (numTopos>9){
+hueco.style.height = "10vh"
+hueco.style.width = "10vh"
+        }
+    }
+
+    topos = document.querySelectorAll(".topo");
+    //recorremos todo el array de topos y para cada uno le agregamos 
+    //un evento que al hacer click se ejecute una funcion
+    topos.forEach(function (element) {
+        element.addEventListener("click", function (e) {
+            //reproducimos sonido
+            hitSound.play();
+            //sumamos el score
+            score += 5;
+            //a la etiqueta le cambiamos la propiedad textcontent
+            // por el valor que tenemos del score
+            spanScore.textContent = score;
+            element.classList.remove("show");
+            contenedor.style.cursor =" url(/juego-web/assets/img/maze1.png) 20 20, pointer";
+        });
+        
+    })
+}
 
 
+crearHuecoTopos(niveles[nivel][4]);
+//seleccionamos todos los topos
+
+const toposCreados = document.getElementsByClassName("cuadro")
+function eliminarHuecoTopos() {
+    for (let i = toposCreados.length; i !== 0; i--) {
+        contenedor.removeChild(toposCreados[i - 1])
+        console.log(toposCreados.length);
+    }
+}
 window.onload = init;
 
 function init() {
@@ -37,24 +86,13 @@ function init() {
 
     document.querySelector("#continuar").addEventListener("click", reanudar);
 
-    reanudar();
+    cronometro = setInterval(time, niveles[nivel][3]);
+    
+
 }
 
 
-//recorremos todo el array de topos y para cada uno le agregamos 
-//un evento que al hacer click se ejecute una funcion
-topos.forEach(function (element) {
-    element.addEventListener("click", function (e) {
-        //reproducimos sonido
-        hitSound.play();
-        //sumamos el score
-        score += 5;
-        //a la etiqueta le cambiamos la propiedad textcontent
-        // por el valor que tenemos del score
-        spanScore.textContent = score;
-        element.classList.remove("show")
-    })
-})
+
 
 
 var cronometro;
@@ -105,23 +143,24 @@ function time() {
 
 
 function aparecer(parmetro) {
-    topos[parmetro].classList.add('show')
+    topos[parmetro].classList.add('show');
+    
+    contenedor.style.cursor =" url(/juego-web/assets/img/maze.png) 20 20, pointer";
 }
 function desaparecer(parmetro) {
     topos[parmetro].classList.remove("show")
 }
 
 function numEnt() {
-    return Math.floor(Math.random() * 9);
+    return Math.floor(Math.random() * topos.length);
 }
 
-var nivel = 0;
 function levelUp() {
     nivel++;
     scoreTotal = score;
     clearInterval(cronometro);
     if (nivel > niveles.length - 1) {
-        modalShow("Felicidades", "Has terminado todos los niveles", "Volver a inicio")
+        modalShow("¡FELICIDADES!", "Has terminado todos los niveles", "Volver a inicio")
     } else {
         //seteo en 0 las variables
         /*  score = 0; */
@@ -135,6 +174,10 @@ function levelUp() {
 
 
         dificultad.textContent = nivel + 1;
+
+        eliminarHuecoTopos();
+
+        crearHuecoTopos(niveles[nivel][4]);
     }
 }
 /* function comprobarGanarPerder() {
@@ -164,9 +207,9 @@ function comprobarGanarPerder() {
     if (minutos >= niveles[nivel][0] && segundos >= niveles[nivel][1]) {
         //al terminar el tiempo
         if (score >= niveles[nivel][2]) {
-            modalShow("Felicidades", "Has completado este nivel", "Reiniciar", "Siguiente");
+            modalShow("¡FELICIDADES!", "Has completado este nivel", "Reiniciar", "Siguiente");
         } else {
-            modalShow("Game Over", "¡Mejor suerte la proxima!", "Reiniciar", "");
+            modalShow("¡OH, NO, LO SIENTO!", "¡Mejor suerte la proxima!", "Reiniciar", "");
         }
         //se detiene y retorna true
         detener();
@@ -185,7 +228,7 @@ function detener() {
 function pausa() {
     menuSound.play();
     clearInterval(cronometro);
-    pauseModal.style.display = "block";
+    pauseModal.style.display = "flex";
 }
 
 function reanudar() {
@@ -196,6 +239,8 @@ function reanudar() {
 
 }
 function reiniciar() {
+    if (boton1Modal.textContent !== "Volver a inicio") {
+        
     pausa();
     //seteo en 0 las variables
     score = scoreTotal;
@@ -205,6 +250,7 @@ function reiniciar() {
     spanScore.textContent = score;
     tiempo.textContent = "00:00";
     reanudar();
+    } 
 
 }
 
@@ -234,7 +280,7 @@ window.addEventListener("click", function (event) {
 }); */
 
 function modalShow(titulo, texto, boton1, boton2) {
-    modal.style.display = "block";
+    modal.style.display = "flex";
     tituloModal.textContent = titulo;
     textoModal.textContent = texto;
     boton1Modal.textContent = boton1;
@@ -277,7 +323,7 @@ const $botonReproducir = document.querySelector("#btnReproducir"),
     $botonPausar = document.querySelector("#btnPausar"),
     $botonReiniciar = document.querySelector("#btnReiniciar");
 // El sonido que podemos reproducir o pausar
-const musicSound = cargarSonido("assets/sound/music.mp3");
+const musicSound = document.getElementById("music");
 const hitSound = cargarSonido("assets/sound/hit.mp3");
 const menuSound = cargarSonido("assets/sound/menu.mp3");
 $botonReproducir.onclick = () => {
