@@ -54,8 +54,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+    
+    cursor: pointer;
 
 }
 .valores{
@@ -70,9 +72,15 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  
+    width: 150px;
     font-size:x-large;
     margin-bottom: -3px;
+}
+.c-white{
+    color: white;
+    
+    font-size:x-large;
+    width: 150px;
 }
 .notebook{
     background-image: url("../assets/img/notebook.png");
@@ -86,6 +94,7 @@ body {
     padding: 10%;
     font-size:xx-large;
     align-items: normal;
+    max-width: 400px;
 }
 
 hr{
@@ -163,6 +172,7 @@ h3 {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .card {
@@ -197,6 +207,14 @@ select {
 
 .bisel {
 
+    box-shadow:
+        0px -1px 1px 1px rgba(0, 0, 0, 0.5),
+        0px 5px 5px 0px rgba(0, 0, 0, 0.5),
+        inset 0px 2px 2px 3px rgba(255, 255, 255, 0.5);
+
+}
+.bisel-fuerte {
+    border: 4px solid white;
     box-shadow:
         0px -1px 1px 1px rgba(0, 0, 0, 0.5),
         0px 5px 5px 0px rgba(0, 0, 0, 0.5),
@@ -239,6 +257,7 @@ select {
 
 
 
+
 /*/////Backgroud*****/
 .bg-purple{
     background: linear-gradient(#C37DD3, #A865B5);
@@ -252,7 +271,7 @@ select {
 }
 
 .bg-rojo {
-    background: linear-gradient(darkred, red);
+    background: linear-gradient( red,darkred);
 }
 
 .bg-verde {
@@ -276,6 +295,24 @@ select {
     background-image: url("../assets/img/bg-secundary.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+.bg-correct{
+    background: linear-gradient(rgb(0, 215, 0), rgb(1, 70, 1));
+
+}
+.bg-incorrect{
+    background: linear-gradient( red,darkred);
+
+}
+.incorrect{
+    color: red;
+
+}
+.correct{
+    color: rgb(0, 215, 0);
+
 }
 
 /*******MEDIAQUERY PARA RESPONSIVE****************/
