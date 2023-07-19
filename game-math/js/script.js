@@ -71,7 +71,13 @@ primerValor.textContent = var2;
 SegundoValor.textContent = var3;/* 
     resultado.textContent =var4; */
 
-function calcular() {
-    
+var show =  document.getElementById("pauseModal");    
 
+function pauseMenu() {
+    pauseModal.style.display = "flex"
+}
+   
+
+function reanudar() {
+    pauseModal.style.display = "none"
 }
