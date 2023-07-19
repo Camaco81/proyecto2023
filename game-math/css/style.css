@@ -40,11 +40,6 @@ body {
 }
 
 
-.bg-yellow {
-    color: white;
-    background: linear-gradient(0deg, #ff7b00,#ffd900);
-}
-
 .circle{
      border-radius: 50%;
 }
@@ -158,10 +153,6 @@ h3 {
     align-items: center;
 }
 
-.white {
-    background-color: white;
-}
-
 .boton {
     display: block;
     margin: 5px;
@@ -259,6 +250,16 @@ select {
 
 
 /*/////Backgroud*****/
+
+.white {
+    background-color: white;
+}
+
+.bg-yellow {
+    color: white;
+    background: linear-gradient(0deg, #ff7b00,#ffd900);
+}
+
 .bg-purple{
     background: linear-gradient(#C37DD3, #A865B5);
 }
