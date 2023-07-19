@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/game-math/assess/img/iconoDeInicio.png" type="image/x-icon">
-    <title>Math game</title>
+    <link rel="shortcut icon" href="/game-math/assets/img/iconoDeInicio.png" type="image/x-icon">
+    <title>Suma secuencial | Math game</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
 </head>
-<h1>suma secuencial</h1>
-<body>
+
+<body class="bg-secundary">
     
+    <header class="header-page">
+        <a href="../inicio.html" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
+        <h1>Suma secuencial</h1>
+        <a class="bg-yellow icon-button circle bisel" onclick="pauseMenu()"><i class="fa-solid fa-pause"></i></a>
+    </header>
+
+    <section class="valores">
+        <div class="dos-columns">
+            <div class="c-white"><a><span id="contador">1</span> /20</a></div>
+        </div>
+        <div class="notebook align-items-end">
+            <section class="banner">
+                <select class="select2">
+                    <option value="value1">Sumar 1</option>
+                    <option value="value2" >Sumar 2</option>
+                    <option value="value3">Sumar 3</option>
+                    <option value="value4">Sumar 4</option>
+                    <option value="value5" >Sumar 5</option>
+                    <option value="value6">Sumar 6</option>
+                    <option value="value7">Sumar 7</option>
+                    <option value="value8" >Sumar 8</option>
+                    <option value="value9">Sumar 9</option>
+                    <option value="value10">Sumar 10 </option>
+                </select>
+            </section>
+            <div class="dos-columns">
+                
+                <div class="">
+                    <a  id="var2">3</a>
+                    <div>
+                        <a  id="var1">+</a>
+                    </div>
+                    <a  id="var3">5</a>
+                </div>
+            </div>
+                   
+                   <div class="dos-columns">
+                       <div>
+                           <a>=</a>
+                       </div>
+                       <div class="">
+                           <a  id="var4">[ ]</a>
+                       </div>
+                   </div>
+        </div>
+    </section>
+
+    <section id="optiones" class="">
+        
+            <a class="bg-purple boton bisel-fuerte option">1</a>
+            <a class="bg-purple boton bisel-fuerte option">2</a>
+       
+            <a class="bg-purple boton bisel-fuerte option">3</a>
+            <a class="bg-purple boton bisel-fuerte option">4</a>
+      
+    </section>
+
+    <div id="pauseModal" class="modal">
+
+        <h2 id="tituloModal">PAUSA</h2>
+        <div class="contenido-modal bg-1">
+            <label >Musica de fondo</label><input  type="checkbox">
+            <label >Sonido</label><input  type="checkbox">
+            <label >Vibraciones en intento erroneo</label><input   type="checkbox">
+            <a  id="btn-reanudar" class="bg-verde boton bisel-fuerte" onclick="reanudar()"><i class="fa-solid fa-play"></i></a>
+        </div>
+
+    
+    
+    
+    <script src="../js/script.js"></script>
 </body>
+
 </html>
