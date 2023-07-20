@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -74,9 +75,16 @@ body {
 .c-white{
     color: white;
     
-    font-size:x-large;
+}
+
+.w-150{
     width: 150px;
 }
+.x-large{
+
+    font-size:x-large;
+}
+    
 .notebook{
     background-image: url("../assets/img/notebook.png");
     background-size:contain;
@@ -142,7 +150,7 @@ section div {
 
 h3 {
     color: blue;
-    margin-left: 20px;
+    margin: 10px;
     font-size: 20px;
 }
 
@@ -154,10 +162,12 @@ h3 {
 }
 
 .boton {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 5px;
-    padding: 15px 20px;
-    background: linear-gradient(rgb(15, 185, 241), rgb(12, 12, 143));
+    padding: 15px 20px;/* 
+    background: linear-gradient(rgb(15, 185, 241), rgb(12, 12, 143)); */
     border-radius: 15px;
     color: white;
     font-weight: bold;
@@ -236,7 +246,12 @@ select {
     min-height: 10px;
     width: 100%;
 }
-
+.m-20{
+    margin: 20px ;
+}
+.p-20{
+    padding: 20px ;
+}
 #optiones{display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -261,6 +276,10 @@ select {
 
 .white {
     background-color: white;
+}
+.bg-white {
+    background-color: white;
+    color:grey
 }
 
 .bg-yellow {
@@ -295,6 +314,11 @@ select {
     background: linear-gradient(darkcyan, darkblue);
 }
 
+.bg-boton {
+    
+    background: linear-gradient(rgb(15, 185, 241), rgb(12, 12, 143));
+}
+
 .bg-primary{
     background-image: url("../assets/img/bg-primary.jpg");
     background-repeat: no-repeat;
@@ -326,7 +350,9 @@ select {
 .modal {
     display: none;
     /* Por defecto, estará oculto */
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: fixed;
     /* Posición fija */
     z-index: 1;
@@ -340,7 +366,7 @@ select {
     /* Algura completa */
     overflow: auto;
     /* Se activará el scroll si es necesario */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     /* Color negro con opacidad del 50% */
     
   }
@@ -350,34 +376,111 @@ select {
     text-align: center;
    
   }
+  .text-center{
+    text-align: center;
+  }
   .contenido-modal {
-   
-    position: relative;
-    /* Relativo con respecto al contenedor -modal- */
     
-    margin:auto;
-    /* Centrada */
-    padding: 30px;
-    width: 60%;
+    width: 80%;
+    height: auto;
     max-width: 500px;
-    min-height: 40vh;
+    max-height: 400px;
     -webkit-animation-name: animarsuperior;
     -webkit-animation-duration: 0.5s;
     animation-name: animarsuperior;
     animation-duration: 0.5s;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-content: space-between;
+    justify-content: center  ;
     border-radius: 10px;
     background-color: white;
-    color: blue;
+    color: blue;/* 
+    text-align: center; */
+    .w-180{
+        width: 180px;
+    }
+    .boton {
+        height: 74px;}
   }
+  #completeModal {
+    display: none;
+    flex-direction: column;/* 
+    justify-content: center; */
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
+.between{
+    justify-content: space-between;
+}
+.betweenAndHeight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
-
-
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
 /*******MEDIAQUERY PARA RESPONSIVE****************/
 @media (min-width:600px) {
     section div {

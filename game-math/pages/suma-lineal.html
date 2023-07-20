@@ -9,12 +9,13 @@
     <title>Suma lineal | Math game</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/check-failure.css">
 </head>
 
 <body class="bg-secundary">
-    
+
     <header class="header-page">
-        <a href="../inicio.html" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
+        <a onclick="salir();" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
         <h1>Suma lineal</h1>
         <a class="bg-yellow icon-button circle bisel" onclick="pauseMenu()"><i class="fa-solid fa-pause"></i></a>
     </header>
@@ -22,53 +23,134 @@
     <section class="valores">
         <div class="dos-columns">
             <div class="marker"><a href="">c</a></div>
-            <div class="c-white"><a><span id="contador">1</span> /10</a></div>
+            <div class="c-white w-150 x-large"><a><span id="contador">0</span> /10</a></div>
         </div>
         <div class="notebook align-items-end">
             <div class="dos-columns">
                 <div>
-                    <a  id="var1">+</a>
+                    <a id="var1">+</a>
                 </div>
                 <div class="align-items-end">
-                    <a  id="var2">3</a>
-                    <a  id="var3">5</a>
+                    <a id="var2">3</a>
+                    <a id="var3">5</a>
                 </div>
             </div>
-                   <hr>
-                   <div class="dos-columns">
-                       <div>
-                           <a>=</a>
-                       </div>
-                       <div class="align-items-end">
-                           <a  id="var4">[ ]</a>
-                       </div>
-                   </div>
+            <hr>
+            <div class="dos-columns">
+                <div>
+                    <a>=</a>
+                </div>
+                <div class="align-items-end">
+                    <a id="var4">[ ]</a>
+                </div>
+            </div>
+
+                <div id="failAnimado" class="o-circle">
+                    <div class="o-circle__sign"></div>
+                </div>
+                <div id="checkAnimado"  class="o-circle">
+                    <div class="o-circle__sign"></div>
+                </div>
+
         </div>
+
+
+
+
     </section>
 
     <section id="optiones" class="">
-        
-            <a class="bg-purple boton bisel-fuerte option">1</a>
-            <a class="bg-purple boton bisel-fuerte option">2</a>
-       
-            <a class="bg-purple boton bisel-fuerte option">3</a>
-            <a class="bg-purple boton bisel-fuerte option">4</a>
-      
+
+        <a class="bg-purple boton bisel-fuerte option">1</a>
+        <a class="bg-purple boton bisel-fuerte option">2</a>
+
+        <a class="bg-purple boton bisel-fuerte option">3</a>
+        <a class="bg-purple boton bisel-fuerte option">4</a>
+
     </section>
 
     <div id="pauseModal" class="modal">
 
         <h2 id="tituloModal">PAUSA</h2>
         <div class="contenido-modal bg-1">
-            <label >musica de fondo</label><input  type="checkbox">
-            <label >Sonido</label><input  type="checkbox">
-            <label >Vibraciones en intento erroneo</label><input   type="checkbox">
-            <a  id="btn-reanudar" class="bg-green boton bisel-fuerte" onclick="reanudar()"><i class="fa-solid fa-play"></i></a>
-        </div>
+            <div class="dos-columns between m-20">
+                <h3>Música de fondo</h3>
+                <!-- Rectangular switch -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <hr>
+            <div class="dos-columns between m-20">
+                <h3>Sonido</h3>
+                <!-- Rectangular switch -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <hr>
+            <div class="dos-columns between m-20">
 
-    
-    
-    
+
+                <h3 class="w-180">Vibraciones en intento erroneo</h3>
+                <!-- Rectangular switch -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <hr>
+            <a id="btn-reanudar" class="bg-boton boton bisel-fuerte m-20" onclick="reanudar()"><i
+                    class="fa-solid fa-play"></i></a>
+        </div>
+    </div>
+    <div id="completeModal" class="bg-primary">
+
+        <header class="header-page">
+            <a onclick="salir();" class="bg-yellow icon-button boton bisel"><i class="fa-solid fa-arrow-left"></i></a>
+        </header>
+        <div class="betweenAndHeight p-20 c-white text-center ">
+            <h1 id="completeTitle">SOBRESALIENTE</h1>
+            <h1 id="completeCount">10 / 10</h1>
+            <div>
+
+                <div class="dos-columns between boton bg-white">
+                    <p class="flex-column correct">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        ¡CORRECTO!
+                    </p>
+                    <a> <span id="idCorrect"></span> / 10</a>
+                    <a><i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                <div class="dos-columns between boton bg-white">
+                    <p class="flex-column incorrect">
+                        <i class="fa-solid fa-cancel "></i>
+                        <br>
+                        ¡INCORRECTO!
+                    </p>
+                    <a><span id="idFail"></span> / 10</a>
+                    <a><i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <a id="btn-reanudar" class=" boton bisel bg-yellow" onclick="complete()">Siguiente</a>
+        </div>
+    </div>
+    <div id="salirModal" class="modal">
+        <div class="contenido-modal bg-1 p-20">
+            <h3>¿Seguro que quieres salir?</h3>
+            <div class="dos-columns between ">
+                <a id="btn-reanudar" class="boton bisel-fuerte bg-white " href="../inicio.html">Si</a>
+                <a id="btn-reanudar" class=" boton bisel-fuerte bg-verde " onclick="salir()">Continuar Jugando</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="../js/script.js"></script>
 </body>
 
