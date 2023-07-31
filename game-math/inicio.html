@@ -6,18 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/iconoDeInicio.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="css/all.css">
+    
     <title>Math game</title>
+    <script src="js/code.jquery.com_jquery-3.2.1.min.js"></script>
+
 </head>
 
 <body>
+    
     <header class="header" >
         <div>
             <h1>BIENVENIDOS A MATH GAME</h1>
-            <a href="" class="icon-button circle white bisel">♥</a>
+            <a  class="icon-button c-white x-large   "><i class="fa-solid fa-gear"></i></a>
         </div>
     </header>
-    <div class="loader"></div>
     <section class="dos-columns">
 
         <a class="boton bg-boton  bisel w40">notas</a>
@@ -35,31 +39,38 @@
         <h3>Suma</h3>
         <div class="suma">
             <a class="box bisel bg-naranja" href="pages/suma-lineal.html">Suma de lineas</a>
-            <a class="box bisel  bg-morado" href="pages/suma-secuencia.html">Secuencial</a>
-            <a class="box bisel  bg-rojo" href=""> 1 + 1 dígito</a>
-            <a class="box bisel  bg-verde" href=""> 2 + 1 dígito</a>
-            <a class="box bisel  bg-marron-oscuro" href=""> Sumar de dobles</a>
-            <a class="box bisel  bg-azul" href=""> Número faltante</a>
+            <a class="box bisel  bg-morado" href="pages/suma-secuencial.html">Secuencial</a>
+            <a class="box bisel  bg-azul" href="pages/numero-faltante.html"> Número faltante</a>
         </div>
     </section>
     <div class="white spacer"></div>
-
+    
     <section>
         <h3>Resta</h3>
         <div class="resta">
             <a class="box bisel  bg-naranja" href=""> Resta de lineas</a>
             <a class="box bisel  bg-morado " href=""> Secuencial</a>
-            <a class="box bisel  bg-rojo " href=""> 1 - 1 dígito</a>
-            <a class="box bisel  bg-verde " href=""> 2 - 1 dígito</a>
+            <a class="box bisel  bg-azul" href="pages/numero-faltante.html"> Número faltante</a>
         </div>
     </section>
+
+    <div class="divisor"></div>
     <footer>
         <div class="dos-columns">
 
-            <a class="card  w40"><i>♦</i>  DESAFIO DIARIO</a>
-            <a class="card  w40"><i>☻</i>  Mensaje para los niños</a>
+            <a class="card  w40"><i class="fa-regular fa-calendar-days"></i> DESAFIO DIARIO</a>
+            <a class="card  w40"><i class="fa-solid fa-face-smile"></i> Mensaje para los niños</a>
         </div>
     </footer>
+
+    
+    <div id="preloaderModal" class="preloader bg-primary"><!-- modal  -->
+        <div class="loader"></div>
+    </div>
+    
+
+    <script src="js/lineal.js"></script>
 </body>
+
 
 </html>

@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma numero faltante | Math game</title>
     <link rel="shortcut icon" href="/game-math/assets/img/iconoDeInicio.png" type="image/x-icon">
-    <title>Suma lineal | Math game</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/all.css">
-    <link rel="stylesheet" href="../css/check-failure.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-</head>
 
+</head>
 <body class="bg-secundary">
 
-    
     <div id="preloaderModal" class="preloader bg-primary"><!-- modal  -->
         <div class="loader"></div>
     </div>
-    
+
     <header class="header-page">
         <a onclick="salir();" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
-        <h1>Suma lineal</h1>
+        <h1>Numero faltante</h1>
         <a class="bg-yellow icon-button circle bisel" onclick="pauseMenu()"><i class="fa-solid fa-pause"></i></a>
     </header>
-
-    <section class="valores">
+     <section class="valores">
         <div class="dos-columns">
             <div class="marker"><a href="">c</a></div>
             <div class="c-white w-150 x-large"><a><span id="contador">0</span> /10</a></div>
@@ -67,11 +62,20 @@
 
     <section id="optiones" class="">
 
-        <a class="bg-purple boton bisel-fuerte option"></a>
-        <a class="bg-purple boton bisel-fuerte option"></a>
+        <a class="bg-purple boton bisel-fuerte option">1</a>
+        <a class="bg-purple boton bisel-fuerte option">2</a>
 
-        <a class="bg-purple boton bisel-fuerte option"></a>
-        <a class="bg-purple boton bisel-fuerte option"></a>
+        <a class="bg-purple boton bisel-fuerte option">3</a>
+        <a class="bg-purple boton bisel-fuerte option">4</a>
+        <a class="bg-purple boton bisel-fuerte option">5</a>
+        <a class="bg-purple boton bisel-fuerte option">6</a>
+
+        <a class="bg-purple boton bisel-fuerte option">7</a>
+        <a class="bg-purple boton bisel-fuerte option">8</a>
+        <a class="bg-purple boton bisel-fuerte option">9</a>
+        <a class="bg-purple boton bisel-fuerte option">←</a>
+
+        <a class="bg-purple boton bisel-fuerte option">0</a>
 
     </section>
 
@@ -82,8 +86,6 @@
 
 
 
-
-    <script src="../js/lineal.js"></script>
+    <script src="../js/faltante.js "></script>
 </body>
-
 </html>

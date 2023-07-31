@@ -1,0 +1,30 @@
+
+<header class="header-page">
+    <a onclick="salir();" class="bg-yellow icon-button boton bisel"><i class="fa-solid fa-arrow-left"></i></a>
+</header>
+<div class="betweenAndHeight p-20 c-white text-center ">
+    <h1 id="completeTitle">SOBRESALIENTE</h1>
+    <h1 id="completeCount">10 / 10</h1>
+    <div>
+
+        <div class="dos-columns between boton bg-white">
+            <p class="flex-column correct">
+                <i class="fa-solid fa-check"></i>
+                <br>
+                ¡CORRECTO!
+            </p>
+            <a> <span id="idCorrect"></span> / 10</a>
+            <a><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <div class="dos-columns between boton bg-white">
+            <p class="flex-column incorrect">
+                <i class="fa-solid fa-cancel "></i>
+                <br>
+                ¡INCORRECTO!
+            </p>
+            <a><span id="idFail"></span> / 10</a>
+            <a><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </div>
+    <a id="btn-reanudar" class=" boton bisel bg-yellow" onclick="complete()">Siguiente</a>
+</div>

@@ -78,7 +78,7 @@
   =========================*/
    
   .o-circle__sign--success { 
-    background: rgb(56, 176, 131);
+    background: linear-gradient(rgb(0, 215, 0), rgb(1, 70, 1));
   }
   
   .o-circle__sign--success .o-circle__sign {
@@ -98,7 +98,7 @@
   
   /*--shadow--*/
   .o-circle__sign--success .o-circle__sign::after {
-     background: rgb(40, 128, 96);
+     background: rgb(1, 70, 1);
   }
    
   
@@ -107,7 +107,7 @@
   =========================*/
   
   .o-circle__sign--failure {
-    background: rgb(236, 78, 75);
+    background: linear-gradient( red,darkred);
   }
   
   .o-circle__sign--failure .o-circle__sign {
@@ -126,7 +126,7 @@
   
   /*--shadow--*/
   .o-circle__sign--failure .o-circle__sign::after {
-     background: rgba(175, 57, 55, .8);
+     background: darkred;
   }
   
   

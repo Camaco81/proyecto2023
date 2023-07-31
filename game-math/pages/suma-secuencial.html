@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/game-math/assets/img/iconoDeInicio.png" type="image/x-icon">
+    <title>Suma secuencial | Math game</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body class="bg-secundary">
+    
+
+    
+    
+    <div id="preloaderModal" class="preloader bg-primary"><!-- modal  -->
+        <div class="loader"></div>
+    </div>
+    <header class="header-page">
+        <a onclick="salir();" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
+        <h1>Suma Secuencial</h1>
+        <a class="bg-yellow icon-button circle bisel" onclick="pauseMenu()"><i class="fa-solid fa-pause"></i></a>
+    </header>
+
+    <section class="valores">
+        <div class="dos-columns">
+            <div class="c-white"><a><span id="contador">0</span> /10</a></div>
+        </div>
+            <section class="banner">
+                <select id="select" class="select2" onchange="resetValues();generarValores()">
+                    <option value="1">Sumar 1</option>
+                    <option value="2">Sumar 2</option>
+                    <option value="3">Sumar 3</option>
+                    <option value="4">Sumar 4</option>
+                    <option value="5">Sumar 5</option>
+                    <option value="6">Sumar 6</option>
+                    <option value="7">Sumar 7</option>
+                    <option value="8">Sumar 8</option>
+                    <option value="9">Sumar 9</option>
+                    <option value="10">Sumar 10 </option>
+                </select>
+            </section>
+        <div class="notebook align-items-end">
+
+            <div class="capa-scroll">
+
+                <div  class="linea">
+                    <a id="var2"> 1</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 1</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 1</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 2</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+                <div  class="linea">
+                    <a id="var2"> 3</a>
+                    <a id="var1">+</a>
+                    <a id="var3"> 1</a>
+                    <a id="">=</a>
+                    <a id="var4">___</a>
+                </div>
+            </div>
+        
+    </section>
+        
+    <div id="failAnimado" class="o-circle">
+        <div class="o-circle__sign"></div>
+    </div>
+    <div id="checkAnimado" class="o-circle">
+        <div class="o-circle__sign"></div>
+    </div>
+
+    <section id="optiones" class="">
+        
+            <a class="bg-purple boton bisel-fuerte option">1</a>
+            <a class="bg-purple boton bisel-fuerte option">2</a>
+       
+            <a class="bg-purple boton bisel-fuerte option">3</a>
+            <a class="bg-purple boton bisel-fuerte option">4</a>
+      
+    </section>
+
+    
+    <!-- insertar página con jquery -->
+    <div id="pauseModal" class="modal"></div>
+    <div id="completeModal" class="bg-primary"></div>
+    <div id="salirModal" class="modal"></div>
+
+
+    <script src="../js/secuencial.js"></script>
+</body>
+
+</html>
