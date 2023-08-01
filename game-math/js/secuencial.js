@@ -76,7 +76,8 @@ function generarValores() {
         }
         buttonsOption[j].textContent = valorBoton[j];
     }
-}
+
+
 function cargarBotones() {
 
 
