@@ -45,7 +45,6 @@ setTimeout(() => {
 }, 1000);
 
 window.onload = () => {
-    console.log("page is fully loaded");
     if (document.title === 'Math game') {
 
     } else {
@@ -108,13 +107,14 @@ function cargarBotones() {
                         buttonsOption[j].classList.add("bg-correct");
                         checkAnimado.classList.add("o-circle__sign--success");
                         nCorrect++;
+                        playCorrect();
                         
                     } else {
                         resultados[0].classList.add("incorrect")
                         buttonsOption[j].classList.add("bg-incorrect");
                         failAnimado.classList.add("o-circle__sign--failure");
                         nFail++;
-                       
+                       playInCorrect();
                     }
                     
                     }/* 
@@ -199,7 +199,7 @@ function complete() {
 }
 
 
-const cargarSonido = function sonido (fuente) {
+function cargarSonido (fuente) {
     const sonido = document.createElement("audio");
     sonido.src = fuente;
     sonido.setAttribute("preload", "auto");
@@ -209,15 +209,13 @@ const cargarSonido = function sonido (fuente) {
     return sonido;
 };
 // El sonido que podemos reproducir o pausar
-const startSound = cargarSonido("assets/sound/fondoRelax.mp3");
-
 
 function playCorrect() {
-  var audio = document.getElementById("correctAudio");
+let audio = cargarSonido("../assets/sound/correct-ding.mp3");
   audio.play();
 }
 function playInCorrect() {
-    var audio = document.getElementById("incorrectAudio");
+    let audio =cargarSonido("../assets/sound/megaman-x-error.mp3");
   audio.play();
 }
 

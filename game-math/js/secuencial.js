@@ -29,7 +29,7 @@ var var1 = 0;
 var var2 = 0;
 var var3 = 0;
 var var4 = 0;
-var resultados=[]; 
+var resultados = [];
 //cuantos botones hay
 var buttonsOption = document.getElementsByClassName("option");
 //calculamos una posicion random para colocar la opcion correcta
@@ -58,18 +58,18 @@ function generarValores() {
     //suma secuencial
     if (document.title === 'Suma secuencial | Math game') {
         for (let i = 0; i < allVar3.length; i++) {
-            var2 = allVar2[i].textContent = i+1;
+            var2 = allVar2[i].textContent = i + 1;
             var3 = allVar3[i].textContent = valSelect.value;
-            resultados[i]= var2 + Number(var3);
+            resultados[i] = var2 + Number(var3);
             console.log(resultados[i])
         }
 
-    } 
+    }
     let posRdn = digito(4);/* 
     resultado.textContent =var4; */ //generar valores de los botones
     for (let j = 0; j < 4; j++) {
         if (j === posRdn) {
-            valorBoton[posRdn] = resultados[nVeces];{
+            valorBoton[posRdn] = resultados[nVeces]; {
 
             }
         } else {
@@ -77,7 +77,7 @@ function generarValores() {
         }
         buttonsOption[j].textContent = valorBoton[j];
     }
-
+}
 
 function cargarBotones() {
 
@@ -103,7 +103,7 @@ function cargarBotones() {
                     
                     }*/
                     //suma secuencial
-                    if (document.title === 'Suma secuencial | Math game') { 
+                    if (document.title === 'Suma secuencial | Math game') {
                         if (valorBoton[j] === resultados[nVeces]) {
                             allVar4[nVeces].classList.add("correct")
                             buttonsOption[j].classList.add("bg-correct");
@@ -115,14 +115,14 @@ function cargarBotones() {
                             failAnimado.classList.add("o-circle__sign--failure");
                             nFail++
                         }
-                        
+
                     }
-                     
-                    
+
+
 
                     nVeces++;
                     contador.textContent = nVeces;
-                    allVar4[nVeces-1].textContent = valorBoton[j];
+                    allVar4[nVeces - 1].textContent = valorBoton[j];
                     setTimeout(() => {
                         if (nVeces === 10) {
 
@@ -193,11 +193,11 @@ function complete() {
 }
 
 function resetValues() {
-    nVeces =0;
-    for (let i = 0; i< allVar4.length; i++) {
+    nVeces = 0;
+    for (let i = 0; i < allVar4.length; i++) {
         allVar4[i].textContent = "___";
         allVar4[i].classList.remove("incorrect");
         allVar4[i].classList.remove("correct");
-        
+
     }
 }
