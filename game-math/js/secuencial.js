@@ -56,13 +56,14 @@ var valSelect = document.getElementById("select");
 function generarValores() {
     cargarBotones();
     //suma secuencial
-   
+    if (document.title === 'Suma secuencial | Math game') {
         for (let i = 0; i < allVar3.length; i++) {
             var2 = allVar2[i].textContent = i+1;
             var3 = allVar3[i].textContent = valSelect.value;
             resultados[i]= var2 + Number(var3);
             console.log(resultados[i])
         }
+
     } 
     let posRdn = digito(4);/* 
     resultado.textContent =var4; */ //generar valores de los botones
