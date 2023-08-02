@@ -109,11 +109,13 @@ function cargarBotones() {
                             buttonsOption[j].classList.add("bg-correct");
                             checkAnimado.classList.add("o-circle__sign--success");
                             nCorrect++
+                            playCorrect();
                         } else {
                             allVar4[nVeces].classList.add("incorrect")
                             buttonsOption[j].classList.add("bg-incorrect");
                             failAnimado.classList.add("o-circle__sign--failure");
                             nFail++
+                            playInCorrect();
                         }
 
                     }
@@ -201,3 +203,22 @@ function resetValues() {
 
     }
 }
+
+function cargarSonido (fuente) {
+    const sonido = document.createElement("audio");
+    sonido.src = fuente;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none"; // <-- oculto
+    document.body.appendChild(sonido);
+    return sonido;
+};
+
+function playCorrect() {
+    let audio = cargarSonido("../assets/sound/correct-ding.mp3");
+      audio.play();
+    }
+    function playInCorrect() {
+        let audio =cargarSonido("../assets/sound/megaman-x-error.mp3");
+      audio.play();
+    }
