@@ -444,14 +444,7 @@ select {
     background-color: white;
     color: blue;
 
-    /* 
-    text-align: center;*/
-    .dos-columns {
-        .boton {
-            height: 74px;
-        }
-
-    } 
+  
 }
 
 .w-180 {
@@ -549,6 +542,7 @@ input:checked+.slider:before {
     height: 100px;
     animation: spin 2s linear infinite;
 }
+
 
 
 

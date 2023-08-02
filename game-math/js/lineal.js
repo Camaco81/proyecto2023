@@ -21,6 +21,7 @@ const allVar2 = [...document.querySelectorAll('a#var2')];
 const allVar3 = [...document.querySelectorAll('a#var3')];
 const resultados = [...document.querySelectorAll('a#var4')];
 
+
 var nVeces = 0;
 function digito(p) {
     return Math.floor(Math.random() * p);
@@ -46,6 +47,7 @@ setTimeout(() => {
 window.onload = () => {
     console.log("page is fully loaded");
     if (document.title === 'Math game') {
+
     } else {
         generarValores();
 
@@ -105,12 +107,14 @@ function cargarBotones() {
                         resultados[0].classList.add("correct")
                         buttonsOption[j].classList.add("bg-correct");
                         checkAnimado.classList.add("o-circle__sign--success");
-                        nCorrect++
+                        nCorrect++;
+                        
                     } else {
                         resultados[0].classList.add("incorrect")
                         buttonsOption[j].classList.add("bg-incorrect");
                         failAnimado.classList.add("o-circle__sign--failure");
-                        nFail++
+                        nFail++;
+                       
                     }
                     
                     }/* 
@@ -193,3 +197,28 @@ function complete() {
         completeModal.style.display = "flex"
     }
 }
+
+
+const cargarSonido = function sonido (fuente) {
+    const sonido = document.createElement("audio");
+    sonido.src = fuente;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none"; // <-- oculto
+    document.body.appendChild(sonido);
+    return sonido;
+};
+// El sonido que podemos reproducir o pausar
+const startSound = cargarSonido("assets/sound/fondoRelax.mp3");
+
+
+function playCorrect() {
+  var audio = document.getElementById("correctAudio");
+  audio.play();
+}
+function playInCorrect() {
+    var audio = document.getElementById("incorrectAudio");
+  audio.play();
+}
+
+
