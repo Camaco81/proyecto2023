@@ -35,6 +35,7 @@ var buttonsOption = document.getElementsByClassName("option");
 //calculamos una posicion random para colocar la opcion correcta
 
 var valorBoton = [];
+var words = ["¡Pésimo!", "¡Malo!", "¡Regular!", "¡Aceptable!", "¡Normal!", "¡Bueno!", "¡Notable!", "¡Excelente!", "¡Sobresaliente!", "¡Excepcional!"];
 var nCorrect = 0;
 var nFail = 0;
 var block = false;
@@ -44,7 +45,7 @@ setTimeout(() => {
 }, 1000);
 
 window.onload = () => {
-    console.log("page is fully loaded");
+
     if (document.title === 'Math game') {
     } else {
         generarValores();
@@ -54,14 +55,15 @@ window.onload = () => {
     //crear valores de las paginas cargadas con jquery
     const idCorrect = document.getElementById('idCorrect');
     const idFail = document.getElementById('idFail');
+    const completeTitle = document.getElementById('completeTitle');
 
 };
 
-var valSelect = document.getElementById("select");
+
 function generarValores() {
     cargarBotones();
     //Suma lineal
-    if (document.title === 'Suma numero faltante | Math game') {
+    if (document.title === 'Suma número faltante | Math game') {
         var2 = digito(10);
         var3 = digito(10);
         var4 = var2 + var3;
@@ -73,56 +75,54 @@ function generarValores() {
     }
 
 }
-    //let posRdn = digito(4);
-    //resultado.textContent =var4; //generar valores de los botones
-   /*  for (let j = 0; j <11; j++) {
-        if (j === posRdn) {
-            valorBoton[posRdn] = var4;
-        } else {
-            valorBoton[j] = digito(10 * 2);
-        }
-        buttonsOption[j].textContent = valorBoton[j];
-    } */
+//let posRdn = digito(4);
+//resultado.textContent =var4; //generar valores de los botones
+/*  for (let j = 0; j <11; j++) {
+     if (j === posRdn) {
+         valorBoton[posRdn] = var4;
+     } else {
+         valorBoton[j] = digito(10 * 2);
+     }
+     buttonsOption[j].textContent = valorBoton[j];
+ } */
 
 function cargarBotones() {
 
 
-    for (let j = 0; j < 11; j++) {
+    for (let j = 0; j < 10; j++) {
         buttonsOption[j].addEventListener(
             "click", function () {
                 if (block === false) {
                     block = true;
-                    //Suma lineal
-                    if (document.title === 'Suma numero faltante | Math game') {
-                        if (buttonsOption[j] === var3) {
+
+                    if (document.title === 'Suma número faltante | Math game') {
+
+                        if (buttonsOption[j].textContent == var3) {
                             SegundoValor.classList.add("correct")
                             buttonsOption[j].classList.add("bg-correct");
                             checkAnimado.classList.add("o-circle__sign--success");
                             nCorrect++
+                            playCorrect()
                         } else {
                             SegundoValor.classList.add("incorrect")
                             buttonsOption[j].classList.add("bg-incorrect");
                             failAnimado.classList.add("o-circle__sign--failure");
                             nFail++
+                            playInCorrect()
                         }
 
                     }
-                    //suma secuencial
-                    if (document.title === 'Suma secuencial | Math game') {
-
-                    }
-
-
 
                     nVeces++;
-                    contador.textContent = nVeces;
-                    resultados[0].textContent = valorBoton[j];
+                    contador.textContent = nVeces; 
+                    SegundoValor.textContent = var3;
                     setTimeout(() => {
                         if (nVeces === 10) {
 
                             idCorrect.textContent = nCorrect;
 
                             idFail.textContent = nFail;
+                            completeTitle.textContent = words[nCorrect - 1];
                             complete();
 
                         } else {
@@ -147,11 +147,10 @@ function remover() {
         buttonsOption[i].classList.remove("bg-correct");
         buttonsOption[i].classList.remove("bg-incorrect");
     }
-    for (let i = 0; i < resultados.length; i++) {
-        resultados[i].classList.remove("incorrect");
-        resultados[i].classList.remove("correct");
+    SegundoValor.classList.remove("incorrect");
+    SegundoValor.classList.remove("correct");
 
-    }
+
     checkAnimado.classList.remove("o-circle__sign--success");
     failAnimado.classList.remove("o-circle__sign--failure");
 
@@ -185,4 +184,24 @@ function complete() {
     } else {
         completeModal.style.display = "flex"
     }
+}
+
+function cargarSonido(fuente) {
+    const sonido = document.createElement("audio");
+    sonido.src = fuente;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none"; // <-- oculto
+    document.body.appendChild(sonido);
+    return sonido;
+};
+// El sonido que podemos reproducir o pausar
+
+function playCorrect() {
+    let audio = cargarSonido("../assets/sound/correct-ding.mp3");
+    audio.play();
+}
+function playInCorrect() {
+    let audio = cargarSonido("../assets/sound/megaman-x-error.mp3");
+    audio.play();
 }

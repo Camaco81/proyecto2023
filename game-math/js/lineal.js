@@ -36,6 +36,7 @@ var buttonsOption = document.getElementsByClassName("option");
 //calculamos una posicion random para colocar la opcion correcta
 
 var valorBoton = [];
+var words = [ "¡Pésimo!", "¡Malo!", "¡Regular!", "¡Aceptable!", "¡Normal!", "¡Bueno!", "¡Notable!", "¡Excelente!", "¡Sobresaliente!", "¡Excepcional!"];
 var nCorrect = 0;
 var nFail = 0;
 var block = false;
@@ -55,6 +56,7 @@ window.onload = () => {
     //crear valores de las paginas cargadas con jquery
     const idCorrect = document.getElementById('idCorrect');
     const idFail = document.getElementById('idFail');
+    const completeTitle = document.getElementById('completeTitle');
 
 };
 /* 
@@ -102,28 +104,28 @@ function cargarBotones() {
                     block = true;
                     //Suma lineal
                     if (document.title === 'Suma lineal | Math game') {
-                    if (valorBoton[j] === var4) {
-                        resultados[0].classList.add("correct")
-                        buttonsOption[j].classList.add("bg-correct");
-                        checkAnimado.classList.add("o-circle__sign--success");
-                        nCorrect++;
-                        playCorrect();
-                        
-                    } else {
-                        resultados[0].classList.add("incorrect")
-                        buttonsOption[j].classList.add("bg-incorrect");
-                        failAnimado.classList.add("o-circle__sign--failure");
-                        nFail++;
-                       playInCorrect();
-                    }
-                    
+                        if (valorBoton[j] === var4) {
+                            resultados[0].classList.add("correct")
+                            buttonsOption[j].classList.add("bg-correct");
+                            checkAnimado.classList.add("o-circle__sign--success");
+                            nCorrect++;
+                            playCorrect();
+
+                        } else {
+                            resultados[0].classList.add("incorrect")
+                            buttonsOption[j].classList.add("bg-incorrect");
+                            failAnimado.classList.add("o-circle__sign--failure");
+                            nFail++;
+                            playInCorrect();
+                        }
+
                     }/* 
                     //suma secuencial
                     if (document.title === 'Suma secuencial | Math game') { 
                         
                     }
                      */
-                    
+
 
                     nVeces++;
                     contador.textContent = nVeces;
@@ -134,6 +136,7 @@ function cargarBotones() {
                             idCorrect.textContent = nCorrect;
 
                             idFail.textContent = nFail;
+                            completeTitle.textContent = words[nCorrect-1];
                             complete();
 
                         } else {
@@ -199,7 +202,7 @@ function complete() {
 }
 
 
-function cargarSonido (fuente) {
+function cargarSonido(fuente) {
     const sonido = document.createElement("audio");
     sonido.src = fuente;
     sonido.setAttribute("preload", "auto");
@@ -211,12 +214,12 @@ function cargarSonido (fuente) {
 // El sonido que podemos reproducir o pausar
 
 function playCorrect() {
-let audio = cargarSonido("../assets/sound/correct-ding.mp3");
-  audio.play();
+    let audio = cargarSonido("../assets/sound/correct-ding.mp3");
+    audio.play();
 }
 function playInCorrect() {
-    let audio =cargarSonido("../assets/sound/megaman-x-error.mp3");
-  audio.play();
+    let audio = cargarSonido("../assets/sound/megaman-x-error.mp3");
+    audio.play();
 }
 
 

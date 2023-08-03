@@ -35,6 +35,7 @@ var buttonsOption = document.getElementsByClassName("option");
 //calculamos una posicion random para colocar la opcion correcta
 
 var valorBoton = [];
+var words = [ "¡Pésimo!", "¡Malo!", "¡Regular!", "¡Aceptable!", "¡Normal!", "¡Bueno!", "¡Notable!", "¡Excelente!", "¡Sobresaliente!", "¡Excepcional!"];
 var nCorrect = 0;
 var nFail = 0;
 var block = false;
@@ -49,6 +50,7 @@ window.onload = () => {
     //crear valores de las paginas cargadas con jquery
     const idCorrect = document.getElementById('idCorrect');
     const idFail = document.getElementById('idFail');
+    const completeTitle = document.getElementById('completeTitle');
 
 };
 
@@ -131,6 +133,7 @@ function cargarBotones() {
                             idCorrect.textContent = nCorrect;
 
                             idFail.textContent = nFail;
+                            completeTitle.textContent = words[nCorrect-1];
                             complete();
 
                         } else {
