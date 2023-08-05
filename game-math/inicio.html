@@ -8,18 +8,18 @@
     <link rel="shortcut icon" href="assets/img/iconoDeInicio.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
-    
+
     <title>Math game</title>
     <script src="js/code.jquery.com_jquery-3.2.1.min.js"></script>
 
 </head>
 
 <body>
-    
-    <header class="header" >
+
+    <header class="header">
         <div>
             <h1>BIENVENIDOS A MATH GAME</h1>
-            <a  class="icon-button c-white x-large   "><i class="fa-solid fa-gear"></i></a>
+            <a class="icon-button c-white x-large   "><i class="fa-solid fa-gear"></i></a>
         </div>
     </header>
     <section class="dos-columns">
@@ -29,29 +29,49 @@
     </section>
     <section class="white banner">
         <!-- El segundo será seleccionado inicialmente -->
-        <select name="select">
-            <option value="value1">Value 1</option>
-            <option value="value2" selected>Value 2</option>
-            <option value="value3">Value 3</option>
+        <select id="selectLevel" name="select" onchange="cambiarNivel()">
+            <option selected>Nivel 1</option>
+            <option>Nivel 2</option>
         </select>
     </section>
-    <section>
+    <section id="sumaSection">
         <h3>Suma</h3>
         <div class="suma">
-            <a class="box bisel bg-naranja" href="pages/suma-lineal.html">Suma de lineas</a>
-            <a class="box bisel  bg-morado" href="pages/suma-secuencial.html">Secuencial</a>
-            <a class="box bisel  bg-verde" href="pages/numero-faltante.html"> Número faltante</a>
+            <a class="box bisel link bg-naranja" href="pages/lineal.html">Suma de lineas</a>
+            <a class="box bisel link bg-morado" href="pages/secuencial.html">Suma Secuencial</a>
+            <a class="box bisel link bg-verde" href="pages/numero-faltante.html">Suma Número faltante</a>
         </div>
-    </section>
+        
     <div class="white spacer"></div>
-    
-    <section>
+    </section>
+
+    <section id="restaSection">
         <h3>Resta</h3>
         <div class="resta">
-            <a class="box bisel  bg-naranja" href=""> Resta de lineas</a>
-            <a class="box bisel  bg-morado " href=""> Secuencial</a>
-            <a class="box bisel  bg-verde" href="pages/numero-faltante.html"> Número faltante</a>
+            <a class="box bisel link bg-naranja"  href="pages/lineal.html"> Resta de lineas</a>
+            <a class="box bisel link bg-morado " href="pages/secuencial.html">Resta Secuencial</a>
+            <a class="box bisel link bg-verde" href="pages/numero-faltante.html">Resta Número faltante</a>
         </div>
+        <div class="white spacer"></div>
+    </section>
+    <section id="multiplicacionSection" style="display: none;">
+        <h3>Multiplicación</h3>
+        <div class="Multiplicación">
+            <a class="box bisel link bg-naranja" href="pages/lineal.html">Multiplicación de lineas</a>
+            <a class="box bisel link bg-morado" href="pages/secuencial.html">Multiplicación Secuencial</a>
+            <a class="box bisel link bg-verde" href="pages/numero-faltante.html">Multiplicación Número faltante</a>
+        </div>
+    <div class="white spacer"></div>
+    </section>
+
+    <section id="divisionSection"  style="display: none;">
+        <h3>División</h3>
+        <div class="División">
+            <a class="box bisel link bg-naranja"  href="pages/lineal.html"> División de lineas</a>
+            <a class="box bisel link bg-morado  href="pages/secuencial.html">División Secuencial</a>
+            <a class="box bisel link bg-verde" href="pages/numero-faltante.html">División Número faltante</a>
+        </div>
+        <div class="white spacer"></div>
     </section>
 
     <div class="divisor"></div>
@@ -63,21 +83,21 @@
         </div>
     </footer>
 
-    
-    <div id="preloaderModal" class="preloader bg-primary" ><!-- modal  -->
+
+    <div id="preloaderModal" class="preloader bg-primary"><!-- modal  -->
         <div class="loader"></div>
     </div>
-    
-<audio src="assets/sound/fondoRelax.mp3" autoplay loop></audio>
-<!-- 
+
+    <audio src="assets/sound/fondoRelax.mp3" autoplay loop></audio>
+    <!-- 
     <audio src="assets/sound/fondoRelax.mp3" autoplay="autoplay"></audio> -->
-    <audio src="assets/sound/correct-ding.mp3" id="corectAudio"  ></audio>
-    <audio src="assets/sound/megaman-x-error.mp3" id="incorectAudio"  ></audio>
-    
+    <audio src="assets/sound/correct-ding.mp3" id="corectAudio"></audio>
+    <audio src="assets/sound/megaman-x-error.mp3" id="incorectAudio"></audio>
 
     <script src="js/lineal.js"></script>
+    <script src="js/main.js"></script>
 
-    </body>
+</body>
 
 
 </html>

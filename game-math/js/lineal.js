@@ -1,5 +1,6 @@
 //cargamos el contenido de la pagina con jquery
 $(document).ready(function () {
+    $('#header').load('../components/header.html');
     $('#pauseModal').load('../components/pause-modal.html');
     $('#completeModal').load('../components/complete-modal.html');
     $('#salirModal').load('../components/salir-modal.html');
@@ -36,7 +37,7 @@ var buttonsOption = document.getElementsByClassName("option");
 //calculamos una posicion random para colocar la opcion correcta
 
 var valorBoton = [];
-var words = [ "¡Pésimo!", "¡Malo!", "¡Regular!", "¡Aceptable!", "¡Normal!", "¡Bueno!", "¡Notable!", "¡Excelente!", "¡Sobresaliente!", "¡Excepcional!"];
+var words = ["¡Pésimo!", "¡Malo!", "¡Regular!", "¡Aceptable!", "¡Normal!", "¡Bueno!", "¡Notable!", "¡Excelente!", "¡Sobresaliente!", "¡Excepcional!"];
 var nCorrect = 0;
 var nFail = 0;
 var block = false;
@@ -62,17 +63,39 @@ window.onload = () => {
 /* 
 var valSelect = document.getElementById("select"); */
 function generarValores() {
+    var1 = localStorage.getItem("signo");
     cargarBotones();
-    //Suma lineal
-    if (document.title === 'Suma lineal | Math game') {
-        var2 = digito(10);
-        var3 = digito(10);
-        var4 = var2 + var3;
-        //mostrar resultados
-        signo.textContent = "+";
-        primerValor.textContent = var2;
-        SegundoValor.textContent = var3;
-    }/* 
+    switch (var1) {
+        case "+":
+            var2 = digito(10);
+            var3 = digito(10);
+            var4 = var2 + var3;
+            break;
+        case "-":
+            var2 = digito(10);
+            var3 = digito(10);
+            var4 = var2 - var3;
+            break;
+        case "x":
+            var2 = digito(10);
+            var3 = digito(10);
+            var4 = var2 * var3;
+            break;
+        case "/":
+            var2 = digito(10);
+            var3 = digito(10);
+            var4 = var2 / var3;
+            break;
+
+        default:
+            break;
+    }
+
+    //mostrar resultados
+    signo.textContent = var1;
+    primerValor.textContent = var2;
+    SegundoValor.textContent = var3;
+    /* 
     //suma secuencial
     if (document.title === 'Suma secuencial | Math game') {
         for (let i = 0; i < allVar4.length; i++) {
@@ -136,7 +159,7 @@ function cargarBotones() {
                             idCorrect.textContent = nCorrect;
 
                             idFail.textContent = nFail;
-                            completeTitle.textContent = words[nCorrect-1];
+                            completeTitle.textContent = words[nCorrect - 1];
                             complete();
 
                         } else {
@@ -222,4 +245,29 @@ function playInCorrect() {
     audio.play();
 }
 
+const sumaSection = document.getElementById("sumaSection");
+const restaSection = document.getElementById("restaSection");
+const multiplicacionSection = document.getElementById("multiplicacionSection");
+const divisionSection = document.getElementById("divisionSection");
+const selectLevel = document.getElementById("selectLevel");
+function cambiarNivel() {
+    switch (selectLevel.options.selectedIndex) {
+        case 0:
+            sumaSection.style.display = "block"
+            restaSection.style.display = "block"
+            multiplicacionSection.style.display = "none"
+            divisionSection.style.display = "none"
+            break;
+        case 1:
+            sumaSection.style.display = "none"
+            restaSection.style.display = "none"
+            multiplicacionSection.style.display = "block"
+            divisionSection.style.display = "block"
+
+            break;
+
+        default:
+            break;
+    }
+}
 
