@@ -23,11 +23,7 @@
     <div id="preloaderModal" class="preloader bg-primary"><!-- modal  -->
         <div class="loader"></div>
     </div>
-    <header class="header-page">
-        <a onclick="salir();" class="bg-yellow icon-button circle bisel"><i class="fa-solid fa-house"></i></a>
-        <h1>Suma Secuencial</h1>
-        <a class="bg-yellow icon-button circle bisel" onclick="pauseMenu()"><i class="fa-solid fa-pause"></i></a>
-    </header>
+    <div id="header"></div>
 
     <section class="valores">
         <div class="dos-columns">
@@ -35,16 +31,16 @@
         </div>
             <section class="banner">
                 <select id="select" class="select2" onchange="resetValues();generarValores()">
-                    <option value="1">Sumar 1</option>
-                    <option value="2">Sumar 2</option>
-                    <option value="3">Sumar 3</option>
-                    <option value="4">Sumar 4</option>
-                    <option value="5">Sumar 5</option>
-                    <option value="6">Sumar 6</option>
-                    <option value="7">Sumar 7</option>
-                    <option value="8">Sumar 8</option>
-                    <option value="9">Sumar 9</option>
-                    <option value="10">Sumar 10 </option>
+                    <option value="1"><span class="operation"></span> 1</option>
+                    <option value="2"><span class="operation"></span> 2</option>
+                    <option value="3"><span class="operation"></span> 3</option>
+                    <option value="4"><span class="operation"></span> 4</option>
+                    <option value="5"><span class="operation"></span> 5</option>
+                    <option value="6"><span class="operation"></span> 6</option>
+                    <option value="7"><span class="operation"></span> 7</option>
+                    <option value="8"><span class="operation"></span> 8</option>
+                    <option value="9"><span class="operation"></span> 9</option>
+                    <option value="10"><span class="operation"></span> 10 </option>
                 </select>
             </section>
         <div class="notebook align-items-end">

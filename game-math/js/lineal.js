@@ -82,8 +82,8 @@ function generarValores() {
             var4 = var2 * var3;
             break;
         case "/":
-            var2 = digito(10);
-            var3 = digito(10);
+            var3 = digito(10); 7
+            var2 = var3 * (digito(10)+1);
             var4 = var2 / var3;
             break;
 
