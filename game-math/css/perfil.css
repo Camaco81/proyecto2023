@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Mustard Smile';
+    src: url('../assets/fonts/German\ Beauty.ttf');
+
+}
+body{
+    background-image: url(/game-math/assets/img/bg-secundary.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+}
+
+
+
+.perfil{
+    font-family: 'Mustard Smile';
+    text-align: center;
+    background-image: url(/game-math/assets/img/bg-primary.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 18px;
+    border-radius: 50%; 
+    color: rgb(0, 0, 0);
+   
+}
+.container{
+    font-family: 'Mustard Smile';
+    display: flex;
+    justify-content: center;
+  
+}
+.tablero{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background-image: url(/game-math/assets/img/bg-primary.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    border-radius: 5%; 
+    text-align: center;
+}
+
+p{
+    text-align: center;
+   
+}
+.content{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100%;
+    height:40px ;
+    width:40px ;
+      
+}
+
+.display{
+    display: flex;
+    justify-content: center;
+}
+a{
+    margin: 12px;
+    font-size: 20px;
+}
+
+
+
+

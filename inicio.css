@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Marmellata';
+    src: url('/academy-programer/assets/fonts/Marmellata\(Jam\)_demo.ttf');
+}
+
+body{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url(img/fondo-degradado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+header{
+    background:rgba(54, 25, 185, 0.771);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+section{
+    text-align: center;
+}
+footer{
+   background:rgba(54, 25, 185, 0.771);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+color:rgba(10, 176, 241, 0.771) ;
+}
+li{
+   color: rgb(54, 25, 185);
+}
+
+nav{
+    margin-bottom: 30%;
+}
+
+
