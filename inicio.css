@@ -1,6 +1,5 @@
-@font-face {
-    font-family: 'Marmellata';
-    src: url('/academy-programer/assets/fonts/Marmellata\(Jam\)_demo.ttf');
+*{
+margin: 0;
 }
 
 body{
@@ -13,36 +12,62 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    height: 100vh;
+    width: 100vw;
 }
 header{
     background:rgba(54, 25, 185, 0.771);
     color: white;
     text-align: center;
-    padding: 30px;
+    font-size: 30px;
+    width: 100%;
 }
-section{
-    text-align: center;
+
+.presentacion{
+text-align: center;
+margin: 20px;
 }
-footer{
-   background:rgba(54, 25, 185, 0.771);
-    color: white;
-    text-align: center;
-    padding: 20px;
+
+h3{
+    margin: 20px;
+}
+
+.list{
+ display: flex;
+ flex-flow: column wrap;
+ margin: 20px;
+}
+.btn{
+height: 50px;
+width: 130px;
+background-color: rgb(89, 5, 102);
+border-radius: 10%;
+margin: 5px;
+text-align: center;
+}
+
+.btn:hover{
+background:rgba(10, 176, 241, 0.771) ;
 }
 a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+text-decoration: none;
+color: rgb(255, 255, 255);
 }
+footer{
+    background:rgba(54, 25, 185, 0.771);
+     color: white;
+     text-align: center;
+     padding: 20px;
+     position: absolute;
+     bottom: 0px;
+     width: 100%;
+ }
 
-a:hover{
-color:rgba(10, 176, 241, 0.771) ;
-}
-li{
-   color: rgb(54, 25, 185);
-}
 
-nav{
-    margin-bottom: 30%;
-}
+
+
+
+
+
 
 
