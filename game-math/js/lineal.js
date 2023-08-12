@@ -199,6 +199,7 @@ var show = document.getElementById("pauseModal");
 const salirModal = document.getElementById("salirModal");
 const completeModal = document.getElementById("completeModal");
 
+
 function pauseMenu() {
     pauseModal.style.display = "flex";
 }
@@ -270,4 +271,5 @@ function cambiarNivel() {
             break;
     }
 }
+
 
