@@ -346,6 +346,11 @@ footer {
     padding: 2rem;
 }
 
+.container-btns{
+    display: flex;
+    justify-content: center;
+}
+
 .btn1 {
     background-color: aliceblue;
     color: black;
