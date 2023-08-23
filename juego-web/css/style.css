@@ -29,7 +29,7 @@ body {
   height: 15vh;
   /* 
     background-color: green; */
-  background-image: url("/juego-web/assets/img/agujero.png");
+  background-image: url(/juego-web/assets/img/agujero.png);
   background-size: contain;
 
 }
