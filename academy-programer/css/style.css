@@ -346,6 +346,12 @@ footer {
     padding: 2rem;
 }
 
+.container-btns{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .btn1 {
     background-color: aliceblue;
     color: black;
@@ -539,6 +545,10 @@ footer {
 #main-header a:hover{
     background-color: #ddd;
     color: black;
+}
+
+#third{
+    display:block;
 }
 
     /*aqui iria el codigo necesario para editar la version mobile*/
