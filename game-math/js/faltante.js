@@ -1,5 +1,6 @@
 //cargamos el contenido de la pagina con jquery
 $(document).ready(function () {
+    $('#header').load('../components/header.html');
     $('#pauseModal').load('../components/pause-modal.html');
     $('#completeModal').load('../components/complete-modal.html');
     $('#salirModal').load('../components/salir-modal.html');
