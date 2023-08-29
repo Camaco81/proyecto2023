@@ -34,7 +34,7 @@ function crearHuecoTopos(numTopos) {
         let topo = document.createElement("a");
         let imgTopo = document.createElement("img");
         imgTopo.setAttribute("class", "topo");
-        imgTopo.setAttribute("src", "/juego-web/assets/img/topo-solo.png");
+        imgTopo.setAttribute("src", "../assets/img/topo-solo.png");
         topo.appendChild(imgTopo);
         hueco.appendChild(topo);
         contenedor.appendChild(hueco);
@@ -57,7 +57,7 @@ hueco.style.width = "10vh"
             // por el valor que tenemos del score
             spanScore.textContent = score;
             element.classList.remove("show");
-            contenedor.style.cursor =" url(/juego-web/assets/img/maze1.png) 20 20, pointer";
+            contenedor.style.cursor =" url(../assets/img/maze1.png) 20 20, pointer";
         });
         
     })
@@ -145,7 +145,7 @@ function time() {
 function aparecer(parmetro) {
     topos[parmetro].classList.add('show');
     
-    contenedor.style.cursor =" url(/juego-web/assets/img/maze.png) 20 20, pointer";
+    contenedor.style.cursor =" url(../assets/img/maze.png) 20 20, pointer";
 }
 function desaparecer(parmetro) {
     topos[parmetro].classList.remove("show")
